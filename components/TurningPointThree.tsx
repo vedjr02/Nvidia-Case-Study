@@ -23,6 +23,7 @@ export function TurningPointThree() {
         title="The Demand Shock"
         standfirst="ChatGPT did not change what NVIDIA was. It changed how many organisations concluded, simultaneously, that they needed to buy what NVIDIA already sold."
         period="2022 – 2024"
+        beatDate="2022-11-30"
       />
 
       <Band as="section" labelledBy="chapter-3-title" className="py-16 sm:py-24">
