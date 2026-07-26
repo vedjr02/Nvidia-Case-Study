@@ -151,7 +151,14 @@ export function MaskReveal({
   );
 }
 
-/** Same masked reveal, but triggered by scroll rather than on mount. */
+/**
+ * Same masked reveal, but triggered by scroll rather than on mount.
+ *
+ * Important: the IntersectionObserver must watch an *unclipped* outer element.
+ * If `whileInView` sits on the transformed child inside `overflow: hidden`, the
+ * observer often never sees a visible intersection and the title stays stuck
+ * below the mask forever — which is exactly the empty chapter-opener bug.
+ */
 export function MaskRevealInView({
   children,
   className,
@@ -170,17 +177,27 @@ export function MaskRevealInView({
   }
 
   return (
-    <span className={cn("block overflow-hidden pb-[0.08em]", className)}>
-      <motion.span
-        className="block"
-        initial={{ y: "108%" }}
-        whileInView={{ y: "0%" }}
-        viewport={{ once: true, margin: "0px 0px -15% 0px" }}
-        transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }}
-      >
-        {children}
-      </motion.span>
-    </span>
+    <motion.span
+      className={cn("block", className)}
+      initial="hidden"
+      whileInView="shown"
+      viewport={{ once: true, amount: 0.4 }}
+    >
+      <span className="block overflow-hidden pb-[0.08em]">
+        <motion.span
+          className="block will-change-transform"
+          variants={{
+            hidden: { y: "110%" },
+            shown: {
+              y: "0%",
+              transition: { duration, delay, ease: [0.16, 1, 0.3, 1] },
+            },
+          }}
+        >
+          {children}
+        </motion.span>
+      </span>
+    </motion.span>
   );
 }
 
