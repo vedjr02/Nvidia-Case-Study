@@ -28,6 +28,7 @@ const DESTINATIONS: Destination[] = [
   { id: "chapter-2", label: "The Quiet Shift", kind: "Chapter", hint: "2016–2022 · Data centre overtakes gaming" },
   { id: "chapter-3", label: "The Demand Shock", kind: "Chapter", hint: "2022–2024 · Price and volume rise together" },
   { id: "chapter-4", label: "Becoming Infrastructure", kind: "Chapter", hint: "2024–2026 · Concentration and expectations" },
+  { id: "record", label: "The record", kind: "Exhibit", hint: "Sixty-eight sourced events across six lanes" },
   { id: "lessons", label: "What transfers", kind: "Section", hint: "Six portable lessons" },
   { id: "summary", label: "Executive summary", kind: "Section", hint: "The one-page version" },
   { id: "sources", label: "Sources and method", kind: "Section", hint: "How this was verified" },
@@ -37,11 +38,19 @@ export function ChapterNav() {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [highlighted, setHighlighted] = useState(0);
+  const [shortcutLabel, setShortcutLabel] = useState("Ctrl K");
   const reduceMotion = useReducedMotion();
 
   const inputRef = useRef<HTMLInputElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const returnFocusRef = useRef<HTMLElement | null>(null);
+
+  // Resolve the shortcut glyph after mount so SSR and the first client paint
+  // agree. Detecting macOS during render is a hydration mismatch waiting to happen.
+  useEffect(() => {
+    const isApple = /Mac|iPhone|iPad|iPod/i.test(navigator.platform);
+    setShortcutLabel(isApple ? "⌘K" : "Ctrl K");
+  }, []);
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -137,13 +146,13 @@ export function ChapterNav() {
           returnFocusRef.current = event.currentTarget;
           setOpen(true);
         }}
-        className="fixed bottom-6 right-6 z-40 flex items-center gap-2.5 rounded-full border border-rule-strong bg-paper-raised/90 px-4 py-2.5 font-sans text-[0.75rem] text-ink-muted shadow-none backdrop-blur-sm transition-colors duration-300 hover:border-ink hover:text-ink"
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2.5 rounded-full border border-rule-strong bg-paper-raised px-4 py-2.5 font-sans text-[0.75rem] text-ink-muted transition-colors duration-300 hover:border-ink hover:text-ink"
         aria-haspopup="dialog"
         aria-expanded={open}
       >
         <span>Jump to</span>
         <kbd className="rounded border border-rule-strong px-1.5 py-0.5 font-sans text-[0.625rem] uppercase tracking-wide text-ink-faint">
-          ⌘K
+          {shortcutLabel}
         </kbd>
       </button>
 
