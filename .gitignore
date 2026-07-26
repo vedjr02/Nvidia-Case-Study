@@ -31,3 +31,4 @@ yarn-error.log*
 # research working files (raw agent output, superseded by data/*.json)
 research/raw
 .tmp_research
+.micro_push_count
