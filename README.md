@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# How NVIDIA Became the Backbone of the AI Economy
 
-## Getting Started
+An interactive business case study — editorial scroll story, not a dashboard —
+exploring the strategic decisions, financial performance and industry shifts that
+turned NVIDIA from a gaming GPU manufacturer into the world's AI infrastructure
+layer.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router) · React 19 · TypeScript
+- Tailwind CSS 4 · Motion · Recharts · Lucide
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project layout
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/                 Route and design tokens
+components/          Chapters, charts, shared editorial primitives
+data/                Verified, cited datasets (source of truth)
+docs/                Architecture, design system, wireframes, research notes
+lib/                 Data accessors, formatting, story clock
+research/raw/        Working research extracts (gitignored)
+```
 
-## Learn More
+## Data integrity
 
-To learn more about Next.js, take a look at the following resources:
+Every number on the page comes from a primary source (SEC filings, NVIDIA CFO
+commentary, Yahoo Finance, named research firms). Claims that could not be
+verified are listed in Sources and under `docs/research/rejected/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Local preview |
+| `npm run build` | Production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | ESLint |
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Private case-study project.
