@@ -22,6 +22,7 @@ export function TurningPointOne() {
         title="From Graphics Company to Computing Platform"
         standfirst="In 2006 NVIDIA began spending heavily to make its graphics chips programmable for work that had nothing to do with graphics. There was no market for it."
         period="2006 – 2016"
+        beatDate="2006-11-08"
       />
 
       <Band as="section" labelledBy="chapter-1-title" className="py-16 sm:py-24">
