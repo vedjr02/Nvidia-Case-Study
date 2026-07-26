@@ -24,6 +24,7 @@ export function TurningPointFour() {
         title="Becoming Infrastructure"
         standfirst="A company whose revenue is four other companies' capital budgets is no longer a supplier to an industry. It is a dependency of one — and it inherits that industry's risks."
         period="2024 – 2026"
+        beatDate="2024-03-18"
       />
 
       <Band as="section" labelledBy="chapter-4-title" className="py-16 sm:py-24">
