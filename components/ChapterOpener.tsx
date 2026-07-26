@@ -53,7 +53,7 @@ export function ChapterOpener({
       {/* Atmospheric chapter numeral — fills the void so the band reads as a composed page. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -right-6 top-1/2 -translate-y-1/2 select-none font-serif text-[clamp(14rem,48vw,30rem)] font-normal leading-none tracking-[-0.06em] text-ink-inverse/[0.055] sm:-right-10"
+        className="pointer-events-none absolute -right-6 top-1/2 -translate-y-1/2 select-none font-serif text-[clamp(14rem,48vw,30rem)] font-normal leading-none tracking-[-0.06em] text-ink-inverse/[0.09] sm:-right-10"
       >
         {numeral.padStart(2, "0")}
       </span>
