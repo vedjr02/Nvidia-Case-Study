@@ -1,6 +1,34 @@
+# dependencies
 node_modules
+.pnp
+.pnp.*
+
+# next.js
 .next
 out
+next-env.d.ts
+
+# production
+build
+dist
+
+# misc
 .DS_Store
-.env*
-research/raw/
+*.pem
+.vercel
+*.tsbuildinfo
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# env
+.env
+.env.*
+!.env.example
+
+# research working files (raw agent output, superseded by data/*.json)
+research/raw
+.tmp_research
+.micro_push_count

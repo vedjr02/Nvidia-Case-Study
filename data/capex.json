@@ -1,0 +1,447 @@
+{
+  "meta": {
+    "description": "Annual cash purchases of property and equipment for the four largest hyperscalers.",
+    "marketDefinition": "Annual cash 'purchases of property and equipment' from each company's consolidated statement of cash flows. This is the cleanest comparable capex measure but note the caveats below — it is NOT 'AI spending'.",
+    "caveats": [
+      "AMAZON: capex on this line includes very large NON-AI components — fulfilment centres, sort centres, delivery stations, transportation fleet, Whole Foods and physical stores, and (from 2025) Project Kuiper satellite infrastructure. Amazon's AI/AWS share of total capex is not separately disclosed on the cash flow statement. Do not treat Amazon's capex as an AI proxy.",
+      "MICROSOFT: fiscal year ends 30 June, so Microsoft's series is NOT calendar-aligned with the other three. Microsoft FY2025 = 1 Jul 2024 to 30 Jun 2025. Additionally, Microsoft's management commentary on 'capital expenditures' usually includes finance leases, which are NOT in this cash flow line — management-quoted capex is materially higher than the figures here.",
+      "META: the cash flow line is purchases of property and equipment. Meta's guided 'capital expenditures' includes principal payments on finance leases, so guided figures are not directly comparable to the actuals here.",
+      "ALPHABET: the cash flow line includes purchases of property and equipment across all of Alphabet, including offices and Other Bets, not just data centres.",
+      "None of the four companies disclose a GPU-only or AI-only capex figure."
+    ],
+    "sources": {
+      "microsoft": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000789019/us-gaap/PaymentsToAcquirePropertyPlantAndEquipment.json",
+      "alphabet": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001652044/us-gaap/PaymentsToAcquirePropertyPlantAndEquipment.json",
+      "meta": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001326801/us-gaap/PaymentsToAcquirePropertyPlantAndEquipment.json"
+    },
+    "fiscalYearNotes": {
+      "microsoft": "30 June"
+    }
+  },
+  "companies": {
+    "microsoft": [
+      {
+        "year": "FY2015",
+        "calendarYear": 2015,
+        "periodEnd": "2015-06-30",
+        "usdBillions": 5.94,
+        "confidence": "reported"
+      },
+      {
+        "year": "FY2016",
+        "calendarYear": 2016,
+        "periodEnd": "2016-06-30",
+        "usdBillions": 8.34,
+        "confidence": "reported"
+      },
+      {
+        "year": "FY2017",
+        "calendarYear": 2017,
+        "periodEnd": "2017-06-30",
+        "usdBillions": 8.13,
+        "confidence": "reported"
+      },
+      {
+        "year": "FY2018",
+        "calendarYear": 2018,
+        "periodEnd": "2018-06-30",
+        "usdBillions": 11.63,
+        "confidence": "reported"
+      },
+      {
+        "year": "FY2019",
+        "calendarYear": 2019,
+        "periodEnd": "2019-06-30",
+        "usdBillions": 13.93,
+        "confidence": "reported"
+      },
+      {
+        "year": "FY2020",
+        "calendarYear": 2020,
+        "periodEnd": "2020-06-30",
+        "usdBillions": 15.44,
+        "confidence": "reported"
+      },
+      {
+        "year": "FY2021",
+        "calendarYear": 2021,
+        "periodEnd": "2021-06-30",
+        "usdBillions": 20.62,
+        "confidence": "reported"
+      },
+      {
+        "year": "FY2022",
+        "calendarYear": 2022,
+        "periodEnd": "2022-06-30",
+        "usdBillions": 23.89,
+        "confidence": "reported"
+      },
+      {
+        "year": "FY2023",
+        "calendarYear": 2023,
+        "periodEnd": "2023-06-30",
+        "usdBillions": 28.11,
+        "confidence": "reported"
+      },
+      {
+        "year": "FY2024",
+        "calendarYear": 2024,
+        "periodEnd": "2024-06-30",
+        "usdBillions": 44.48,
+        "confidence": "reported"
+      },
+      {
+        "year": "FY2025",
+        "calendarYear": 2025,
+        "periodEnd": "2025-06-30",
+        "usdBillions": 64.55,
+        "confidence": "reported"
+      }
+    ],
+    "alphabet": [
+      {
+        "year": 2015,
+        "calendarYear": 2015,
+        "periodEnd": null,
+        "usdBillions": 9.95,
+        "confidence": "reported"
+      },
+      {
+        "year": 2016,
+        "calendarYear": 2016,
+        "periodEnd": null,
+        "usdBillions": 10.21,
+        "confidence": "reported"
+      },
+      {
+        "year": 2017,
+        "calendarYear": 2017,
+        "periodEnd": null,
+        "usdBillions": 13.18,
+        "confidence": "reported"
+      },
+      {
+        "year": 2018,
+        "calendarYear": 2018,
+        "periodEnd": null,
+        "usdBillions": 25.14,
+        "confidence": "reported"
+      },
+      {
+        "year": 2019,
+        "calendarYear": 2019,
+        "periodEnd": null,
+        "usdBillions": 23.55,
+        "confidence": "reported"
+      },
+      {
+        "year": 2020,
+        "calendarYear": 2020,
+        "periodEnd": null,
+        "usdBillions": 22.28,
+        "confidence": "reported"
+      },
+      {
+        "year": 2021,
+        "calendarYear": 2021,
+        "periodEnd": null,
+        "usdBillions": 24.64,
+        "confidence": "reported"
+      },
+      {
+        "year": 2022,
+        "calendarYear": 2022,
+        "periodEnd": null,
+        "usdBillions": 31.48,
+        "confidence": "reported"
+      },
+      {
+        "year": 2023,
+        "calendarYear": 2023,
+        "periodEnd": null,
+        "usdBillions": 32.25,
+        "confidence": "reported"
+      },
+      {
+        "year": 2024,
+        "calendarYear": 2024,
+        "periodEnd": null,
+        "usdBillions": 52.53,
+        "confidence": "reported"
+      },
+      {
+        "year": 2025,
+        "calendarYear": 2025,
+        "periodEnd": null,
+        "usdBillions": 91.45,
+        "confidence": "reported"
+      }
+    ],
+    "amazon": [
+      {
+        "year": 2015,
+        "calendarYear": 2015,
+        "periodEnd": null,
+        "usdBillions": 4.59,
+        "confidence": "reported"
+      },
+      {
+        "year": 2016,
+        "calendarYear": 2016,
+        "periodEnd": null,
+        "usdBillions": 6.74,
+        "confidence": "reported"
+      },
+      {
+        "year": 2016,
+        "calendarYear": 2016,
+        "periodEnd": null,
+        "usdBillions": 7.8,
+        "confidence": "reported"
+      },
+      {
+        "year": 2017,
+        "calendarYear": 2017,
+        "periodEnd": null,
+        "usdBillions": 11.96,
+        "confidence": "reported"
+      },
+      {
+        "year": 2018,
+        "calendarYear": 2018,
+        "periodEnd": null,
+        "usdBillions": 13.43,
+        "confidence": "reported"
+      },
+      {
+        "year": 2019,
+        "calendarYear": 2019,
+        "periodEnd": null,
+        "usdBillions": 16.86,
+        "confidence": "reported"
+      },
+      {
+        "year": 2020,
+        "calendarYear": 2020,
+        "periodEnd": null,
+        "usdBillions": 40.14,
+        "confidence": "reported"
+      },
+      {
+        "year": 2021,
+        "calendarYear": 2021,
+        "periodEnd": null,
+        "usdBillions": 61.05,
+        "confidence": "reported"
+      },
+      {
+        "year": 2022,
+        "calendarYear": 2022,
+        "periodEnd": null,
+        "usdBillions": 63.65,
+        "confidence": "reported"
+      },
+      {
+        "year": 2023,
+        "calendarYear": 2023,
+        "periodEnd": null,
+        "usdBillions": 52.73,
+        "confidence": "reported"
+      },
+      {
+        "year": 2024,
+        "calendarYear": 2024,
+        "periodEnd": null,
+        "usdBillions": 83,
+        "confidence": "reported"
+      },
+      {
+        "year": 2025,
+        "calendarYear": 2025,
+        "periodEnd": null,
+        "usdBillions": 131.82,
+        "confidence": "reported"
+      }
+    ],
+    "meta": [
+      {
+        "year": 2015,
+        "calendarYear": 2015,
+        "periodEnd": null,
+        "usdBillions": 2.52,
+        "confidence": "reported"
+      },
+      {
+        "year": 2016,
+        "calendarYear": 2016,
+        "periodEnd": null,
+        "usdBillions": 4.49,
+        "confidence": "reported"
+      },
+      {
+        "year": 2017,
+        "calendarYear": 2017,
+        "periodEnd": null,
+        "usdBillions": 6.73,
+        "confidence": "reported"
+      },
+      {
+        "year": 2018,
+        "calendarYear": 2018,
+        "periodEnd": null,
+        "usdBillions": 13.91,
+        "confidence": "reported"
+      },
+      {
+        "year": 2019,
+        "calendarYear": 2019,
+        "periodEnd": null,
+        "usdBillions": 15.1,
+        "confidence": "reported"
+      },
+      {
+        "year": 2020,
+        "calendarYear": 2020,
+        "periodEnd": null,
+        "usdBillions": 15.16,
+        "confidence": "reported"
+      },
+      {
+        "year": 2021,
+        "calendarYear": 2021,
+        "periodEnd": null,
+        "usdBillions": 18.69,
+        "confidence": "reported"
+      },
+      {
+        "year": 2022,
+        "calendarYear": 2022,
+        "periodEnd": null,
+        "usdBillions": 31.19,
+        "confidence": "reported"
+      },
+      {
+        "year": 2023,
+        "calendarYear": 2023,
+        "periodEnd": null,
+        "usdBillions": 27.05,
+        "confidence": "reported"
+      },
+      {
+        "year": 2024,
+        "calendarYear": 2024,
+        "periodEnd": null,
+        "usdBillions": 37.26,
+        "confidence": "reported"
+      },
+      {
+        "year": 2025,
+        "calendarYear": 2025,
+        "periodEnd": null,
+        "usdBillions": 69.69,
+        "confidence": "reported"
+      }
+    ]
+  },
+  "combined": [
+    {
+      "year": 2023,
+      "usdBillions": 140.1,
+      "components": {
+        "microsoft": 28.1,
+        "alphabet": 32.3,
+        "amazon": 52.7,
+        "meta": 27
+      },
+      "confidence": "computed"
+    },
+    {
+      "year": 2024,
+      "usdBillions": 217.3,
+      "components": {
+        "microsoft": 44.5,
+        "alphabet": 52.5,
+        "amazon": 83,
+        "meta": 37.3
+      },
+      "confidence": "computed"
+    },
+    {
+      "year": 2025,
+      "usdBillions": 357.5,
+      "components": {
+        "microsoft": 64.6,
+        "alphabet": 91.4,
+        "amazon": 131.8,
+        "meta": 69.7
+      },
+      "confidence": "computed"
+    }
+  ],
+  "combinedNote": "Sum of the four cash-flow capex lines. Microsoft's fiscal year offset means this is an approximation, not a true calendar-year total.",
+  "guidance2026": {
+    "confidence": "guidance",
+    "importantNote": "Guidance was revised UPWARD repeatedly during 2026. Two rounds are recorded below because sources published at different dates carry different numbers and it would be misleading to show only one. As of 26 July 2026 the Q2 round is the most current. Company-defined 'capital expenditures' in guidance generally includes finance leases and is therefore not directly comparable to the cash-flow actuals above.",
+    "roundQ1_2026_reportedApril2026": [
+      {
+        "company": "Amazon",
+        "valueUsd": 200000000000,
+        "basis": "point estimate",
+        "statedBy": "Andy Jassy, CEO",
+        "statedDate": "2026-02",
+        "reaffirmed": "Q1 2026 earnings call — not updated",
+        "url": "https://finance.yahoo.com/sectors/technology/articles/big-tech-capex-ranked-alphabet-131000066.html"
+      },
+      {
+        "company": "Microsoft",
+        "valueUsd": 190000000000,
+        "basis": "approximate",
+        "note": "Business Insider reports this includes roughly $25B related to higher component pricing; it was well above the ~$147B analyst consensus",
+        "url": "https://www.businessinsider.com/big-tech-earnings-microsoft-ai-investment-capex-plan-2026-4"
+      },
+      {
+        "company": "Alphabet",
+        "valueRangeUsd": [
+          180000000000,
+          190000000000
+        ],
+        "basis": "range",
+        "note": "raised from a prior $175-185B range at Q1",
+        "url": "https://finance.yahoo.com/sectors/technology/articles/big-tech-capex-ranked-alphabet-131000066.html"
+      },
+      {
+        "company": "Meta",
+        "valueRangeUsd": [
+          125000000000,
+          145000000000
+        ],
+        "basis": "range",
+        "note": "raised from a prior $115-135B range",
+        "url": "https://finance.yahoo.com/sectors/technology/articles/big-tech-capex-ranked-alphabet-131000066.html"
+      },
+      {
+        "company": "COMBINED",
+        "valueUsd": 725000000000,
+        "basis": "top-end sum",
+        "note": "Widely reported as ~$725B, up ~77% on 2025's ~$410B",
+        "url": "https://www.statista.com/chart/35046/capital-expenditure-of-meta-alphabet-amazon-and-microsoft/"
+      }
+    ],
+    "roundQ2_2026_reportedJuly2026": [
+      {
+        "company": "Alphabet",
+        "valueRangeUsd": [
+          195000000000,
+          205000000000
+        ],
+        "basis": "range",
+        "statedDate": "2026-07-22",
+        "note": "Raised at Q2 2026 earnings from the $180-190B range. Context given: Google Cloud revenue +82% YoY to $24.8B; backlog up $50B in the quarter to $514B.",
+        "url": "https://valueaddvc.com/blog/alphabet-205b-ai-capex-guidance-2026-what-googles-q2-earnings-raise-actually-buys",
+        "sourceQuality": "MEDIUM — secondary. Not verified against Alphabet's own 8-K or earnings call transcript in this pass.",
+        "disagreement": "Conflicts with the April-reported $180-190B range. The July figure is later and specific about the raise, so it is more likely current, but it should be confirmed against Alphabet's Q2 2026 earnings release before use."
+      }
+    ],
+    "verificationFlag": "All 2026 guidance figures in this section come from secondary reporting of earnings calls, not from primary 8-K exhibits. Guidance is normally spoken on the call rather than printed in the release, so primary confirmation requires the call transcripts. RECOMMEND VERIFYING before publication."
+  }
+}
