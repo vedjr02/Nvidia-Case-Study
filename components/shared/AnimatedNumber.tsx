@@ -6,6 +6,38 @@ import { animate, useInView, useReducedMotion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 /**
+ * Number formatting is described declaratively rather than passed as a
+ * callback, because these components are rendered from Server Components and
+ * functions cannot cross that boundary.
+ */
+export type NumberFormat =
+  | { kind: "percent"; decimals?: number }
+  | { kind: "signedPercent"; decimals?: number }
+  | { kind: "points"; decimals?: number }
+  | { kind: "multiple"; decimals?: number }
+  | { kind: "usdBillions"; decimals?: number }
+  | { kind: "usdTrillions"; decimals?: number };
+
+export function formatNumber(value: number, format: NumberFormat): string {
+  const decimals = format.decimals ?? 1;
+
+  switch (format.kind) {
+    case "percent":
+      return `${value.toFixed(decimals)}%`;
+    case "signedPercent":
+      return `${value > 0 ? "+" : ""}${value.toFixed(decimals)}%`;
+    case "points":
+      return `${value > 0 ? "+" : ""}${value.toFixed(decimals)}pts`;
+    case "multiple":
+      return `${value.toFixed(decimals)}×`;
+    case "usdBillions":
+      return `$${value.toFixed(decimals)}bn`;
+    case "usdTrillions":
+      return `$${value.toFixed(decimals)}tn`;
+  }
+}
+
+/**
  * Counts a figure up when it scrolls into view.
  *
  * The count is decorative — it draws the eye to a number that matters — so the
@@ -19,27 +51,26 @@ export function AnimatedNumber({
   duration = 1.4,
 }: {
   value: number;
-  format: (value: number) => string;
+  format: NumberFormat;
   className?: string;
   duration?: number;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -15% 0px" });
   const reduceMotion = useReducedMotion();
-  const [display, setDisplay] = useState(() =>
-    reduceMotion ? value : value * 0,
-  );
+  const [counted, setCounted] = useState(0);
+
+  // Derived during render rather than synced through an effect: readers who
+  // asked for reduced motion simply never read the animated value.
+  const display = reduceMotion ? value : counted;
 
   useEffect(() => {
-    if (!inView || reduceMotion) {
-      setDisplay(value);
-      return;
-    }
+    if (!inView || reduceMotion) return;
 
     const controls = animate(0, value, {
       duration,
       ease: [0.16, 1, 0.3, 1],
-      onUpdate: setDisplay,
+      onUpdate: setCounted,
     });
 
     return () => controls.stop();
@@ -47,8 +78,8 @@ export function AnimatedNumber({
 
   return (
     <span ref={ref} className={cn("tabular", className)}>
-      <span aria-hidden="true">{format(display)}</span>
-      <span className="sr-only">{format(value)}</span>
+      <span aria-hidden="true">{formatNumber(display, format)}</span>
+      <span className="sr-only">{formatNumber(value, format)}</span>
     </span>
   );
 }
@@ -67,7 +98,7 @@ export function StatBlock({
   className,
 }: {
   value: number;
-  format: (value: number) => string;
+  format: NumberFormat;
   label: string;
   context: string;
   tone?: "paper" | "pitch";

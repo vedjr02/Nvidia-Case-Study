@@ -8,7 +8,7 @@ import {
   StageSteps,
   Step,
 } from "@/components/shared/ScrollStage";
-import { Band, Column } from "@/components/shared/Section";
+import { Band } from "@/components/shared/Section";
 import { Kicker, Prose, PullQuote } from "@/components/shared/Typography";
 import { crossover, latestQuarter, quarterByFiscal } from "@/lib/data";
 import { formatLongDate, percent, usdAuto, usdBillions } from "@/lib/format";

@@ -53,29 +53,31 @@ const STAGES = [
 
 const X_START = toTimeValue("2015-04-26");
 
-/** Springs a number towards a target, so axis rescaling reads as a zoom. */
+/**
+ * Eases a number towards a target, so the axis rescaling between stages reads
+ * as a zoom rather than a jump. With motion disabled the target is used
+ * directly, so the axis still changes — the information is in the change, not
+ * in the animation.
+ */
 function useAnimatedNumber(target: number, enabled: boolean) {
-  const [value, setValue] = useState(target);
+  const [tweened, setTweened] = useState(target);
   const previous = useRef(target);
 
   useEffect(() => {
-    if (!enabled) {
-      previous.current = target;
-      setValue(target);
-      return;
-    }
+    if (!enabled) return;
+
     const controls = animate(previous.current, target, {
       duration: 0.9,
       ease: [0.32, 0.72, 0, 1],
       onUpdate: (v) => {
         previous.current = v;
-        setValue(v);
+        setTweened(v);
       },
     });
     return () => controls.stop();
   }, [target, enabled]);
 
-  return value;
+  return enabled ? tweened : target;
 }
 
 export function SegmentChart() {

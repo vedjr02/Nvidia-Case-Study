@@ -272,6 +272,38 @@ export const earningsReactions = eventReactions.filter((e) =>
   /earnings/i.test(e.event),
 );
 
+/**
+ * Each earnings reaction joined to the quarter it reported.
+ *
+ * NVIDIA reports after the closing bell, so the reaction is the following
+ * session — which is what `reactionPct` already measures for earnings entries.
+ * The quarter being reported is the most recent one to have ended before the
+ * release date.
+ *
+ * The pairing is the point: it lets the reader see revenue growth and the
+ * market's response to it on the same time axis, which is the only way to show
+ * that the two decoupled.
+ */
+export const earningsWithGrowth = earningsReactions
+  .map((reaction) => {
+    const reported = [...quarters]
+      .filter((q) => q.quarterEnd < reaction.date)
+      .sort((a, b) => (a.quarterEnd < b.quarterEnd ? 1 : -1))[0];
+
+    if (!reported) return null;
+
+    return {
+      t: toTimeValue(reaction.date),
+      date: reaction.date,
+      fiscalQuarter: reported.fiscalQuarter,
+      reactionPct: reaction.reactionPct,
+      revenueYoyPct: reported.revenueYoyPct,
+      revenue: reported.revenue,
+      source: reaction.source,
+    };
+  })
+  .filter((row): row is NonNullable<typeof row> => row !== null);
+
 /* -------------------------------------------------------------------------- */
 /* Timeline                                                                    */
 /* -------------------------------------------------------------------------- */
