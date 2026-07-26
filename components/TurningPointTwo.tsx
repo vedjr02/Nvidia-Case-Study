@@ -47,6 +47,7 @@ export function TurningPointTwo() {
         title="The Quiet Shift"
         standfirst="NVIDIA became a data-centre company before anyone was watching — and six months before the event that is usually credited with causing it."
         period="2016 – 2022"
+        beatDate="2016-04-05"
       />
 
       <Band as="section" labelledBy="chapter-2-title" className="py-16 sm:py-24">
