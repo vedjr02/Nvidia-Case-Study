@@ -114,6 +114,77 @@ export function RevealItem({
 }
 
 /**
+ * Reveals its children from behind a mask, as if the line of type were being
+ * set. Used for the title sequence and chapter openers.
+ *
+ * The children are rendered on the server; only the wrapper is a client
+ * component, so no text is duplicated into the client bundle.
+ */
+export function MaskReveal({
+  children,
+  className,
+  delay = 0,
+  duration = 0.9,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+  duration?: number;
+}) {
+  const reduceMotion = useReducedMotion();
+
+  if (reduceMotion) {
+    return <span className={cn("block", className)}>{children}</span>;
+  }
+
+  return (
+    <span className={cn("block overflow-hidden pb-[0.08em]", className)}>
+      <motion.span
+        className="block"
+        initial={{ y: "108%" }}
+        animate={{ y: "0%" }}
+        transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }}
+      >
+        {children}
+      </motion.span>
+    </span>
+  );
+}
+
+/** Same masked reveal, but triggered by scroll rather than on mount. */
+export function MaskRevealInView({
+  children,
+  className,
+  delay = 0,
+  duration = 0.9,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+  duration?: number;
+}) {
+  const reduceMotion = useReducedMotion();
+
+  if (reduceMotion) {
+    return <span className={cn("block", className)}>{children}</span>;
+  }
+
+  return (
+    <span className={cn("block overflow-hidden pb-[0.08em]", className)}>
+      <motion.span
+        className="block"
+        initial={{ y: "108%" }}
+        whileInView={{ y: "0%" }}
+        viewport={{ once: true, margin: "0px 0px -15% 0px" }}
+        transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }}
+      >
+        {children}
+      </motion.span>
+    </span>
+  );
+}
+
+/**
  * Holds a chart in place while the reader scrolls past the accompanying prose.
  * This is the scrollytelling primitive: the exhibit stays, the argument moves.
  */

@@ -1,0 +1,1109 @@
+{
+  "meta": {
+    "description": "Sourced timeline of events material to NVIDIA's business, 2006-2026.",
+    "extractedOn": "2026-07-26",
+    "sourcingStandard": "Every event is supported by at least one of: NVIDIA newsroom or investor relations, SEC EDGAR filings (8-K, 10-K, 10-Q, administrative orders), US government publications (BIS, SEC, GAO, Federal Register), the primary counterparty organisation's own announcement (OpenAI, AMD, Broadcom, Microsoft, Meta, Amazon, Google, SoftBank, Anthropic, Intel, S&P Dow Jones Indices), or wire and major-financial-press reporting (Reuters, AP, Bloomberg, CNBC, BBC, FT, NYT). No blogs, no Wikipedia as a sole source, no AI-generated summaries. Where a widely circulated figure could not be traced to a filing or a primary announcement it has been moved to the 'rejected' array or explicitly flagged inside quantifiedImpact.",
+    "caveats": [
+      "NVIDIA's fiscal year ends in late January and is labelled one year ahead of the calendar year in which it mostly falls. Fiscal 2026 ended 25 January 2026; fiscal 2027 Q1 ended 26 April 2026. Calendar dates are used for the 'date' field throughout; fiscal labels are named explicitly in descriptions.",
+      "In Q3 fiscal 2026 NVIDIA changed its geographic revenue disclosure from a ship-to/billing basis to a customer-headquarters basis and recast prior periods. Figures on the two bases are not comparable: for example FY2025 China (incl. Hong Kong) revenue is $25,048M on the recast headquarters basis versus roughly $17.1B previously reported on the ship-to basis. All China percentages in this file use the FY2026 10-K recast headquarters basis unless stated.",
+      "Several 2025-2026 arrangements are letters of intent, warrants or non-binding commitments rather than executed revenue: the NVIDIA-OpenAI 'up to $100 billion', the NVIDIA-Anthropic 'up to $10 billion', and the AMD-OpenAI warrant all vest or fund progressively against deployment milestones. They should not be modelled as booked revenue.",
+      "The Groq transaction was not announced by NVIDIA via press release or 8-K. NVIDIA has publicly confirmed only the content of Groq's own statement; the roughly $20 billion cash figure comes from CNBC reporting a named investor and is not a company-disclosed number.",
+      "Stock split dates: all pre-split share prices and per-share dividends in this file are stated as reported at the time, not retroactively adjusted for the 2021 4-for-1 and 2024 10-for-1 splits.",
+      "Hyperscaler 2026 capex figures are company guidance ranges as of Q1 2026 reporting and are revised frequently; only the Meta figure here is taken from a primary company release.",
+      "China policy in 2026 is unusually fluid. Export licences for H200 exist but Chinese buyers have largely not taken delivery, and NVIDIA has excluded China data-centre compute revenue from its guidance since fiscal 2026.",
+      "This file covers events materially affecting NVIDIA's business. It is not a complete corporate history; routine quarterly results are included only where they mark an inflection or contain a discrete disclosure."
+    ]
+  },
+  "events": [
+    {
+      "id": "e00",
+      "date": "2006-11-08",
+      "datePrecision": "exact",
+      "title": "NVIDIA unveils CUDA alongside the G80 GeForce 8800",
+      "category": "product",
+      "description": "NVIDIA announced CUDA, a general-purpose parallel computing architecture for its GPUs, together with the G80-based GeForce 8800. G80 was the company's first unified-shader, DirectX 10 GPU, and CUDA exposed its processor cores to developers with the industry's first C compiler for a GPU, allowing cores to communicate, synchronise and share data rather than only run graphics pipelines.",
+      "businessSignificance": "CUDA converted the GPU from a fixed-function graphics part into a programmable compute platform, creating the software lock-in that later underpinned NVIDIA's data-centre franchise. Every subsequent AI workload advantage NVIDIA holds traces back to this software layer rather than to silicon alone.",
+      "quantifiedImpact": "GeForce 8800 GTX launched at $599 and GeForce 8800 GTS at $449; G80 was the culmination of four years of R&D per NVIDIA.",
+      "marked": false,
+      "sources": [
+        "https://web.archive.org/web/20200703112618/http:/www.nvidia.com/object/IO_37226.html",
+        "https://www.extremetech.com/gaming/239078-ten-years-ago-today-nvidia-launched-g80-powered-geforce-8800-changed-pc-gaming-computing-forever"
+      ]
+    },
+    {
+      "id": "e01",
+      "date": "2007-02-16",
+      "datePrecision": "exact",
+      "title": "CUDA SDK and C compiler released in public beta",
+      "category": "product",
+      "description": "NVIDIA released a public beta of the CUDA Software Developer Kit and C compiler for Windows XP and Linux, making GPU computing available to any developer rather than to research partners only. CUDA 1.0 followed as a general release in June 2007.",
+      "businessSignificance": "Free, broad distribution of the toolchain seeded an academic and scientific developer base years before there was a commercial AI market, which is why deep-learning researchers in 2010-2012 defaulted to NVIDIA hardware.",
+      "quantifiedImpact": null,
+      "marked": false,
+      "sources": [
+        "https://ptacts.uspto.gov/ptacts/public-informations/petitions/1557428/download-documents?artifactId=zthArGYGApc7ou9YJ7CwjeBGBexIH794R3tZIvBNGpTXQSmS6rOGb1w",
+        "https://web.archive.org/web/20200703112618/http:/www.nvidia.com/object/IO_37226.html"
+      ]
+    },
+    {
+      "id": "e02",
+      "date": "2012-12-01",
+      "datePrecision": "month (NeurIPS 2012 proceedings; ILSVRC-2012 competition results announced October 2012)",
+      "title": "AlexNet wins ImageNet using two consumer NVIDIA GPUs",
+      "category": "ecosystem",
+      "description": "Krizhevsky, Sutskever and Hinton trained an eight-layer convolutional network with 60 million parameters on the ImageNet dataset and reported a decisive improvement over prior computer-vision methods. The network was trained for five to six days on two NVIDIA GTX 580 3GB GPUs, and was split across the two cards specifically because the model would not fit in a single 3GB GPU's memory.",
+      "businessSignificance": "AlexNet established GPUs as the default substrate for deep learning and made CUDA competence a prerequisite for AI research, which is the origin of NVIDIA's structural position in AI training hardware.",
+      "quantifiedImpact": "60 million parameters and 650,000 neurons trained in 5-6 days on two GTX 580 3GB GPUs across roughly 90 passes over 1.2 million labelled images.",
+      "marked": false,
+      "sources": [
+        "https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf",
+        "https://cacm.acm.org/research/imagenet-classification-with-deep-convolutional-neural-networks/"
+      ]
+    },
+    {
+      "id": "e03",
+      "date": "2016-04-05",
+      "datePrecision": "exact",
+      "title": "Pascal architecture and Tesla P100 introduced at GTC",
+      "category": "product",
+      "description": "NVIDIA introduced the Pascal architecture and the Tesla P100 data-centre accelerator, built on a 16nm FinFET process with 15.3 billion transistors, CoWoS packaging with HBM2 memory at 720GB/s, and NVLink interconnect. NVIDIA claimed over a 12x increase in neural-network training performance versus the previous Maxwell generation.",
+      "businessSignificance": "Pascal was the first NVIDIA architecture designed with deep-learning training as a first-order design target and introduced the packaging and interconnect building blocks (HBM, NVLink) that define the data-centre product line to this day.",
+      "quantifiedImpact": "15.3 billion transistors; 720GB/s HBM2 bandwidth; NVIDIA-claimed 12x training performance gain over Maxwell.",
+      "marked": true,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-delivers-massive-performance-leap-for-deep-learning-hpc-applications-with-nvidia-tesla-p100-accelerators",
+        "https://developer.nvidia.com/blog/inside-pascal/"
+      ]
+    },
+    {
+      "id": "e04",
+      "date": "2017-05-10",
+      "datePrecision": "exact",
+      "title": "Volta architecture and Tesla V100 introduce the first Tensor Cores",
+      "category": "product",
+      "description": "NVIDIA launched the Volta architecture and the Tesla V100, a 21-billion-transistor GPU containing 640 Tensor Cores, dedicated matrix-multiply-accumulate units distinct from general CUDA cores. NVIDIA quoted 120 teraflops of deep-learning performance and a 5x peak-teraflop improvement over Pascal.",
+      "businessSignificance": "Tensor Cores were the point at which NVIDIA began building AI-specific silicon rather than repurposing graphics hardware, opening a performance gap on matrix workloads that general-purpose CPUs and GPUs could not close. Every subsequent generation extends this unit.",
+      "quantifiedImpact": "21 billion transistors; 640 Tensor Cores; 120 TFLOPS deep-learning performance; 5x peak teraflops versus Pascal.",
+      "marked": true,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-launches-revolutionary-volta-gpu-platform-fueling-next-era-of-ai-and-high-performance-computing",
+        "https://www.extremetech.com/extreme/249106-nvidia-goes-ai-new-volta-architecture"
+      ]
+    },
+    {
+      "id": "e05",
+      "date": "2017-08-01",
+      "datePrecision": "period (NVIDIA fiscal 2018 Q2 and Q3, quarters ended 30 July 2017 and 29 October 2017)",
+      "title": "Cryptomining demand materially inflates gaming GPU revenue",
+      "category": "market-shock",
+      "description": "As crypto-asset prices rose through 2017, buyers increasingly used GPUs marketed for gaming to mine cryptocurrency. The SEC's later order records that NVIDIA held information indicating cryptomining was a significant factor in the year-over-year growth of gaming GPU revenue during its fiscal 2018 second and third quarters, and that the company's sales personnel, particularly in China, reported significant mining-driven demand increases.",
+      "businessSignificance": "A volatile, non-recurring demand source was being reported inside a segment investors treated as structurally growing, which set up both the 2018 inventory correction and the subsequent SEC enforcement action.",
+      "quantifiedImpact": null,
+      "marked": false,
+      "sources": [
+        "https://www.sec.gov/files/litigation/admin/2022/33-11060.pdf",
+        "https://www.sec.gov/newsroom/press-releases/2022-79"
+      ]
+    },
+    {
+      "id": "e06",
+      "date": "2018-08-13",
+      "datePrecision": "exact",
+      "title": "Turing architecture launched at SIGGRAPH",
+      "category": "product",
+      "description": "NVIDIA launched the Turing architecture with the Quadro RTX 8000, 6000 and 5000. Turing combined dedicated RT Cores for ray tracing with Tensor Cores for AI inference in the same GPU, which NVIDIA described as the largest change since the introduction of CUDA in 2006.",
+      "businessSignificance": "Turing extended Tensor Core availability from data-centre parts into professional and consumer GPUs, broadening the CUDA-plus-Tensor-Core installed base and giving NVIDIA an inference story outside the data centre. It also began the RTX branding that carried the gaming franchise for the next several generations.",
+      "quantifiedImpact": "Up to 4,608 CUDA cores per GPU; ray-tracing throughput of up to 10 GigaRays per second, quoted at up to 25x the previous Pascal generation.",
+      "marked": false,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-reinvents-computer-graphics-with-turing-architecture",
+        "https://nvidianews.nvidia.com/news/nvidia-unveils-quadro-rtx-worlds-first-ray-tracing-gpu"
+      ]
+    },
+    {
+      "id": "e07",
+      "date": "2018-11-15",
+      "datePrecision": "exact",
+      "title": "Q3 fiscal 2019 miss and post-crypto channel inventory correction",
+      "category": "market-shock",
+      "description": "NVIDIA reported fiscal Q3 2019 revenue of $3.18 billion against consensus of about $3.24 billion, with gaming revenue of $1.76 billion versus roughly $1.89 billion expected, and guided fiscal Q4 to $2.70 billion against consensus near $3.40 billion. Management attributed the shortfall to excess channel inventory of mid-range Pascal gaming cards left behind by the collapse of the cryptocurrency boom and said it would ship very little mid-range Pascal for one to two quarters to let the channel clear.",
+      "businessSignificance": "This was the first demonstration that crypto-linked demand could reverse violently and that NVIDIA's channel model transmits the reversal into reported revenue with a lag. It cost roughly a third of the company's equity value in two sessions and became the factual basis for later securities litigation and SEC action.",
+      "quantifiedImpact": "Q4 FY2019 guidance of $2.70bn versus $3.40bn consensus, a shortfall of about $700m; $57m of charges for components and chips following the crypto fall-off; shares fell 18.8% on 16 November 2018 and more than 28% over two trading days.",
+      "marked": true,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2019",
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581018000148/q3fy19cfocommentary.htm",
+        "https://www.cnbc.com/2018/11/16/nvidia-stock-falls-on-revenue-and-guidance-miss.html"
+      ]
+    },
+    {
+      "id": "e08",
+      "date": "2019-03-11",
+      "datePrecision": "exact",
+      "title": "NVIDIA agrees to acquire Mellanox for $6.9 billion",
+      "category": "corporate",
+      "description": "NVIDIA and Mellanox announced a definitive merger agreement, signed 10 March 2019, under which NVIDIA would acquire all outstanding Mellanox shares at $125 per share in cash, an enterprise value of approximately $6.9 billion. NVIDIA said it would fund the deal from balance-sheet cash and expected it to be immediately accretive to non-GAAP gross margin, non-GAAP EPS and free cash flow.",
+      "businessSignificance": "Mellanox gave NVIDIA InfiniBand and high-speed Ethernet networking, which is what allows it to sell rack- and cluster-scale systems rather than discrete accelerators. Networking became a separately material revenue line, reaching $31.4 billion in fiscal 2026.",
+      "quantifiedImpact": "$125.00 per share in cash; approximately $6.9 billion enterprise value.",
+      "marked": false,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-to-acquire-mellanox-for-6-9-billion",
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581019000031/mellanoxform8-k.htm"
+      ]
+    },
+    {
+      "id": "e09",
+      "date": "2019-07-22",
+      "datePrecision": "month (July 2019)",
+      "title": "Microsoft invests $1 billion in OpenAI and becomes its exclusive cloud provider",
+      "category": "ecosystem",
+      "description": "Microsoft made a $1 billion investment in OpenAI and became the exclusive provider of cloud computing services to the lab. Microsoft has publicly confirmed the 2019 investment as the first phase of the partnership; OpenAI has confirmed the same sequence of 2019 and 2021 investments.",
+      "businessSignificance": "This was the first large corporate commitment to funding frontier-model compute, and it established the hyperscaler-plus-lab structure that later drove multi-gigawatt GPU procurement. NVIDIA was the indirect beneficiary as the underlying accelerator supplier for the Azure supercomputers built under the agreement.",
+      "quantifiedImpact": "$1 billion investment (2019).",
+      "marked": false,
+      "sources": [
+        "https://www.cnbc.com/2023/01/23/microsoft-announces-multibillion-dollar-investment-in-chatgpt-maker-openai.html",
+        "https://blogs.microsoft.com/blog/2023/01/23/microsoftandopenaiextendpartnership/"
+      ]
+    },
+    {
+      "id": "e10",
+      "date": "2020-04-27",
+      "datePrecision": "exact",
+      "title": "Mellanox acquisition completes at approximately $7 billion",
+      "category": "corporate",
+      "description": "NVIDIA completed the Mellanox acquisition at a transaction value of approximately $7 billion, roughly thirteen months after announcement, following clearance in all required jurisdictions including China. Mellanox became a wholly owned subsidiary.",
+      "businessSignificance": "In fiscal 2021, the first full year of ownership, Mellanox contributed 10 per cent of total company revenue and was cited by NVIDIA as a principal driver of the 124 per cent data-centre revenue growth that year.",
+      "quantifiedImpact": "Approximately $7 billion transaction value at close; Mellanox contributed 10% of NVIDIA total revenue in fiscal 2021.",
+      "marked": true,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581020000120/nvda-20200427.htm",
+        "https://www.globenewswire.com/news-release/2020/04/27/2022159/0/en/NVIDIA-Completes-Acquisition-of-Mellanox-Creating-Major-Force-Driving-Next-Gen-Data-Centers.html"
+      ]
+    },
+    {
+      "id": "e11",
+      "date": "2020-05-14",
+      "datePrecision": "exact",
+      "title": "Ampere architecture and A100 enter full production",
+      "category": "product",
+      "description": "NVIDIA announced that the A100, the first Ampere-architecture GPU, was in full production and shipping. The A100 carried more than 54 billion transistors on a 7nm process, unified training and inference in one part, and introduced Multi-Instance GPU partitioning. The DGX A100 system with eight A100s was announced the same day.",
+      "businessSignificance": "A100 became the workhorse of the pre-ChatGPT AI build-out and the reference part against which US export controls were later written. NVIDIA quoted up to 20x performance improvement over its predecessor, which reset the cost curve for large-model training.",
+      "quantifiedImpact": "More than 54 billion transistors on 7nm; NVIDIA-quoted up to 20x performance gain over the prior generation; DGX A100 delivered 5 petaflops of AI performance.",
+      "marked": false,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidias-new-ampere-data-center-gpu-in-full-production",
+        "https://nvidianews.nvidia.com/news/nvidia-ships-worlds-most-advanced-ai-system-nvidia-dgx-a100-to-fight-covid-19-third-generation-dgx-packs-record-5-petaflops-of-ai-performance"
+      ]
+    },
+    {
+      "id": "e12",
+      "date": "2020-09-13",
+      "datePrecision": "exact",
+      "title": "NVIDIA agrees to acquire Arm from SoftBank for $40 billion",
+      "category": "corporate",
+      "description": "NVIDIA and SoftBank Group announced a definitive agreement for NVIDIA to acquire Arm Limited in a transaction valued at $40 billion, comprising $21.5 billion in NVIDIA common stock and $12 billion in cash including $2 billion payable at signing, plus an earn-out of up to $5 billion. Closing was expected in approximately 18 months and required approvals in the UK, China, the EU and the US.",
+      "businessSignificance": "The deal would have given NVIDIA control of the CPU instruction-set architecture used across mobile and increasingly in the data centre, and would have been the largest semiconductor acquisition ever attempted. The $2 billion signing payment created downside exposure that later crystallised.",
+      "quantifiedImpact": "$40 billion total consideration: $21.5bn in stock (44.3 million shares), $12bn cash including $2bn at signing, plus up to $5bn earn-out.",
+      "marked": false,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-to-acquire-arm-for-40-billion-creating-worlds-premier-computing-company-for-the-age-of-ai",
+        "https://www.sec.gov/Archives/edgar/data/1045810/000119312520244601/d13958dex991.htm"
+      ]
+    },
+    {
+      "id": "e13",
+      "date": "2021-02-24",
+      "datePrecision": "exact",
+      "title": "COVID-era demand surge and the onset of supply constraints",
+      "category": "market-shock",
+      "description": "NVIDIA reported record fiscal 2021 revenue of $16.68 billion, up 53 per cent, with record gaming and data-centre results. The CFO commentary stated that gaming and data centre benefited from people working, learning and playing from home, and that stronger global demand had limited the availability of capacity and components throughout the supply chain, particularly in gaming.",
+      "businessSignificance": "The pandemic pulled forward several years of PC and cloud demand while simultaneously initiating the industry-wide semiconductor shortage. The resulting inability to satisfy demand set prices and channel inventory on a trajectory that reversed sharply in 2022.",
+      "quantifiedImpact": "FY2021 revenue $16.68bn, up 53%; gaming full-year revenue up 41%; data centre full-year revenue up 124%, of which Mellanox contributed 10% of total company revenue.",
+      "marked": false,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2021",
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581021000007/q4fy21cfocommentary.htm"
+      ]
+    },
+    {
+      "id": "e14",
+      "date": "2021-07-20",
+      "datePrecision": "exact",
+      "title": "Four-for-one stock split takes effect",
+      "category": "corporate",
+      "description": "Following stockholder approval on 3 June 2021 to increase authorised shares to 4 billion, NVIDIA distributed three additional shares for every share held by holders of record on 21 June 2021, after the close on 19 July 2021. Trading began on a split-adjusted basis on 20 July 2021.",
+      "businessSignificance": "The split was framed as improving accessibility for retail investors and employees receiving equity awards; it had no effect on market capitalisation but materially widened the retail shareholder base ahead of the AI re-rating.",
+      "quantifiedImpact": "4-for-1 ratio; authorised common stock increased to 4 billion shares.",
+      "marked": false,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-four-for-one-stock-split-pending-stockholder-approval-at-annual-meeting-set-for-june-3",
+        "https://s201.q4cdn.com/141608511/files/doc_downloads/doc_faq/06/21/NVIDIA-2021-Stock-Split-FAQ.pdf"
+      ]
+    },
+    {
+      "id": "e15",
+      "date": "2022-02-08",
+      "datePrecision": "exact",
+      "title": "Arm acquisition terminated; SoftBank retains $1.25 billion prepayment",
+      "category": "corporate",
+      "description": "NVIDIA and SoftBank mutually terminated the Arm share purchase agreement, citing significant regulatory challenges preventing consummation of the transaction. Under the agreement's terms SoftBank retained the $1.25 billion NVIDIA had prepaid, NVIDIA retained its 20-year Arm licence, and Arm began preparing for an IPO.",
+      "businessSignificance": "NVIDIA recorded a $1.36 billion charge in fiscal Q1 2023 for the failed deal. Strategically it forced NVIDIA to pursue CPU capability organically through Grace and later Vera rather than by owning the architecture, and it established that large horizontal semiconductor consolidation was no longer clearable.",
+      "quantifiedImpact": "$1.25 billion prepayment forfeited; $1.36 billion charge recorded in Q1 fiscal 2023; 20-year Arm licence retained.",
+      "marked": true,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000005/nvda-20220208.htm",
+        "https://nvidianews.nvidia.com/news/nvidia-and-softbank-group-announce-termination-of-nvidias-acquisition-of-arm-limited",
+        "https://group.softbank/en/news/press/20220208_0"
+      ]
+    },
+    {
+      "id": "e16",
+      "date": "2022-03-22",
+      "datePrecision": "exact",
+      "title": "Hopper architecture and H100 announced at GTC",
+      "category": "product",
+      "description": "NVIDIA announced the Hopper architecture and the H100 GPU, successor to Ampere, describing an order-of-magnitude performance leap over the previous generation for AI data centres. Hopper introduced the Transformer Engine and fourth-generation NVLink.",
+      "businessSignificance": "H100 became the defining compute unit of the generative-AI build-out from 2023 onward and the principal driver of NVIDIA's data-centre revenue expansion from roughly $15 billion in fiscal 2023 to $47.5 billion in fiscal 2024. It is also the part most tightly constrained by US export controls.",
+      "quantifiedImpact": "80 billion transistors on TSMC 4N (H100 SXM5).",
+      "marked": false,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-hopper-architecture-the-next-generation-of-accelerated-computing",
+        "https://app.edgar.tools/companies/NVDA/disclosures/segments"
+      ]
+    },
+    {
+      "id": "e17",
+      "date": "2022-05-06",
+      "datePrecision": "exact",
+      "title": "SEC settles charges over inadequate cryptomining disclosure; $5.5 million penalty",
+      "category": "market-shock",
+      "description": "The SEC announced settled charges finding that in two consecutive fiscal 2018 quarters NVIDIA failed to disclose in its Forms 10-Q, as required by Item 303 of Regulation S-K, that cryptomining was a significant element of the material year-over-year growth in gaming GPU revenue. The order found violations of Securities Act Section 17(a)(2) and (3), the Exchange Act disclosure provisions, and a failure to maintain adequate disclosure controls.",
+      "businessSignificance": "The penalty itself was immaterial to NVIDIA's finances, but the order established a documented regulatory finding on demand-source disclosure that has shaped how the company describes concentration and end-market attribution in later filings, including customer concentration and China exposure.",
+      "quantifiedImpact": "$5,500,000 civil money penalty; cease-and-desist order; settled without admitting or denying findings.",
+      "marked": false,
+      "sources": [
+        "https://www.sec.gov/newsroom/press-releases/2022-79",
+        "https://www.sec.gov/files/litigation/admin/2022/33-11060.pdf"
+      ]
+    },
+    {
+      "id": "e18",
+      "date": "2022-08-08",
+      "datePrecision": "exact",
+      "title": "Gaming channel inventory correction; $1.32 billion of charges pre-announced",
+      "category": "market-shock",
+      "description": "NVIDIA pre-announced fiscal Q2 2023 revenue of approximately $6.70 billion against a May outlook of $8.10 billion. Gaming revenue was $2.04 billion, down 44 per cent sequentially and 33 per cent year over year. The shortfall reflected lower sell-in to channel partners amid macroeconomic weakness, and NVIDIA implemented channel pricing programmes and deliberately reduced sell-in to let inventory clear ahead of a new architecture.",
+      "businessSignificance": "A $1.4 billion revenue miss inside a single quarter demonstrated how quickly the two-step gaming channel can invert. The associated inventory charges of about $1.32 billion, comprising roughly $570 million on hand and $650 million of purchase obligations, compressed gross margin severely in the quarter immediately before the data-centre business inflected.",
+      "quantifiedImpact": "Revenue $6.70bn versus $8.10bn outlook; gaming $2.04bn, down 44% Q/Q and 33% Y/Y; approximately $1.32bn of charges (per CFO commentary, $1.34bn total comprising $1.22bn inventory and related reserves plus $122m warranty).",
+      "marked": false,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000133/pressrelease.htm",
+        "https://s201.q4cdn.com/141608511/files/doc_financials/2023/Q2/Q2FY23-CFO-Commentary-FINAL-with-update-for-web-post-include-tables.pdf"
+      ]
+    },
+    {
+      "id": "e19",
+      "date": "2022-08-26",
+      "datePrecision": "exact",
+      "title": "US imposes licence requirement on A100 and H100 exports to China",
+      "category": "regulatory",
+      "description": "The US government informed NVIDIA on 26 August 2022 that a licence would be required, effective immediately, for any future export to China (including Hong Kong) and Russia of A100 and forthcoming H100 integrated circuits, the A100X, and any system incorporating them such as DGX. The requirement extended to any future NVIDIA circuit meeting comparable peak-performance and chip-to-chip I/O thresholds. NVIDIA disclosed the requirement in an 8-K filed 31 August 2022.",
+      "businessSignificance": "This was the first time NVIDIA's flagship data-centre products were placed under destination-based licensing, converting China from an ordinary market into a policy variable. It also forced the design of China-specific derivative parts (A800, H800, later H20), a product-line cost NVIDIA has carried ever since.",
+      "quantifiedImpact": "Approximately $400 million of potential Q3 fiscal 2023 sales to China identified as at risk; NVIDIA shares fell about 6.5% after hours.",
+      "marked": true,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000146/nvda-20220826.htm",
+        "https://www.reuters.com/technology/nvidia-says-us-has-imposed-new-license-requirement-future-exports-china-2022-08-31/"
+      ]
+    },
+    {
+      "id": "e20",
+      "date": "2022-11-30",
+      "datePrecision": "exact",
+      "title": "OpenAI launches ChatGPT",
+      "category": "ecosystem",
+      "description": "OpenAI released ChatGPT as a free research preview, fine-tuned from a model in the GPT-3.5 series. The conversational interface made large-language-model capability legible to non-technical users for the first time at scale.",
+      "businessSignificance": "ChatGPT converted large-model inference from a research cost into a consumer product with immediate compute requirements, and triggered the capital expenditure cycle that took NVIDIA data-centre revenue from $15 billion in fiscal 2023 to $193.7 billion in fiscal 2026. NVIDIA management subsequently used 'since the emergence of ChatGPT' as its reference point for the roughly 13x expansion in that line.",
+      "quantifiedImpact": "One million users within five days of launch.",
+      "marked": true,
+      "sources": [
+        "https://openai.com/index/chatgpt/",
+        "https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/"
+      ]
+    },
+    {
+      "id": "e21",
+      "date": "2023-01-23",
+      "datePrecision": "exact",
+      "title": "Microsoft announces third-phase multibillion-dollar OpenAI investment",
+      "category": "ecosystem",
+      "description": "Microsoft announced a multiyear, multibillion-dollar investment as the third phase of its OpenAI partnership, following investments in 2019 and 2021, with Azure remaining OpenAI's exclusive cloud provider for research, API and product workloads. Microsoft did not disclose the amount; Bloomberg reported the figure as $10 billion.",
+      "businessSignificance": "The commitment underwrote a multi-year Azure AI supercomputing build that was the single largest source of NVIDIA data-centre demand in fiscal 2024, and set the template of capital-for-compute deals later replicated by NVIDIA itself with OpenAI and Anthropic.",
+      "quantifiedImpact": "Amount not disclosed by Microsoft; reported by Bloomberg as $10 billion. Prior phases: $1 billion (2019) and an undisclosed 2021 round.",
+      "marked": false,
+      "sources": [
+        "https://blogs.microsoft.com/blog/2023/01/23/microsoftandopenaiextendpartnership/",
+        "https://openai.com/index/openai-and-microsoft-extend-partnership/",
+        "https://www.bloomberg.com/news/articles/2023-01-23/microsoft-makes-multibillion-dollar-investment-in-openai"
+      ]
+    },
+    {
+      "id": "e22",
+      "date": "2023-02-01",
+      "datePrecision": "exact",
+      "title": "ChatGPT reaches an estimated 100 million monthly active users",
+      "category": "ecosystem",
+      "description": "A UBS study citing Similarweb data estimated ChatGPT reached 100 million monthly active users in January 2023, roughly two months after launch, making it the fastest-growing consumer application recorded to that point. TikTok took approximately nine months and Instagram roughly two and a half years to reach the same threshold.",
+      "businessSignificance": "The adoption curve is what converted AI from a projected to an urgent capital allocation question for every hyperscaler, and is the proximate cause of the 2023 GPU supply shortage that gave NVIDIA extraordinary pricing power.",
+      "quantifiedImpact": "Approximately 100 million monthly active users within two months; roughly 13 million unique daily visitors in January 2023, more than double December levels.",
+      "marked": false,
+      "sources": [
+        "https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/",
+        "https://openai.com/index/chatgpt/"
+      ]
+    },
+    {
+      "id": "e23",
+      "date": "2023-05-24",
+      "datePrecision": "exact",
+      "title": "NVIDIA guides Q2 fiscal 2024 revenue to $11 billion, repricing the AI trade",
+      "category": "market-shock",
+      "description": "NVIDIA reported fiscal Q1 2024 revenue of $7.19 billion, down 13 per cent year over year, but guided the following quarter to $11.00 billion against a consensus of roughly $7.15 billion, citing surging demand for data-centre products used to run generative AI services. Data-centre revenue was a record $4.28 billion in the quarter.",
+      "businessSignificance": "A guide more than 50 per cent above consensus is the moment the market repriced AI infrastructure demand as real and near-term rather than speculative. The share reaction added roughly $200 billion of market value in a single session and set NVIDIA on the path to a $1 trillion valuation weeks later.",
+      "quantifiedImpact": "Q2 FY2024 guidance $11.00bn ±2% versus roughly $7.15bn consensus; shares rose as much as 28% after hours, adding about $200bn of market value to above $950bn.",
+      "marked": true,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2024",
+        "https://www.reuters.com/technology/nvidia-forecasts-second-quarter-revenue-above-estimates-2023-05-24/"
+      ]
+    },
+    {
+      "id": "e24",
+      "date": "2023-10-17",
+      "datePrecision": "exact",
+      "title": "October 2023 export controls capture A800, H800, L40S and RTX 4090",
+      "category": "regulatory",
+      "description": "BIS submitted an interim final rule amending ECCNs 3A090 and 4A090 and imposing licensing on exports to China and Country Groups D1, D4 and D5 of circuits above defined performance thresholds, explicitly including the A100, A800, H100, H800, L40, L40S and RTX 4090, and any system incorporating them. On 23 October 2023 the US government told NVIDIA the requirement for products with total processing performance of 4800 or more was effective immediately rather than after the planned 30-day period.",
+      "businessSignificance": "The rule closed the interconnect-bandwidth workaround NVIDIA had used to build compliant China parts, and shifted the licence trigger toward the buyer's headquarters. NVIDIA stated at the time that global demand strength meant no near-term meaningful financial impact, but China revenue fell from 19.2% of total in fiscal 2025 to 9.1% in fiscal 2026 on the recast basis.",
+      "quantifiedImpact": "Licence threshold set at total processing performance of 4800 or more for data-centre-marketed parts; accelerated effectiveness on 23 October 2023.",
+      "marked": false,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000217/nvda-20231017.htm",
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000221/nvda-20231023.htm",
+        "https://www.reuters.com/technology/nvidia-says-us-speeded-up-new-export-curbs-ai-chips-2023-10-24/"
+      ]
+    },
+    {
+      "id": "e25",
+      "date": "2023-12-06",
+      "datePrecision": "exact",
+      "title": "AMD launches Instinct MI300X",
+      "category": "competitive",
+      "description": "AMD announced availability of the Instinct MI300X accelerator, built on CDNA 3, alongside the MI300A APU and ROCm 6. AMD positioned MI300X on memory bandwidth and capacity for generative AI training and inference, with Dell, HPE and Lenovo systems following in 2024.",
+      "businessSignificance": "MI300X was the first credible merchant alternative to H100 and gave hyperscalers a second-source negotiating position. It did not displace NVIDIA at scale, but it established AMD as the only other vendor able to sell a full data-centre accelerator line, which matters for the 2026 OpenAI multi-gigawatt commitment.",
+      "quantifiedImpact": null,
+      "marked": false,
+      "sources": [
+        "https://www.amd.com/en/newsroom/press-releases/2023-12-6-amd-delivers-leadership-portfolio-of-data-center-a.html"
+      ]
+    },
+    {
+      "id": "e26",
+      "date": "2023-12-06",
+      "datePrecision": "exact",
+      "title": "Google launches Gemini",
+      "category": "ecosystem",
+      "description": "Google introduced Gemini, its multimodal frontier model family, in Nano, Pro and Ultra sizes, immediately upgrading Bard to Gemini Pro across more than 170 countries and making Gemini Pro available to developers via the Gemini API from 13 December 2023.",
+      "businessSignificance": "Gemini committed Google to competing at the frontier, which validated sustained multi-year training capex across all hyperscalers rather than only OpenAI's backers. Gemini is trained and served substantially on Google's own TPUs, making Google simultaneously a large NVIDIA customer and the most advanced internal alternative to NVIDIA silicon.",
+      "quantifiedImpact": null,
+      "marked": false,
+      "sources": [
+        "https://blog.google/intl/en-in/company-news/technology/introducing-gemini-our-largest-and-most-capable-ai-model/"
+      ]
+    },
+    {
+      "id": "e27",
+      "date": "2024-03-18",
+      "datePrecision": "exact",
+      "title": "Blackwell architecture announced at GTC",
+      "category": "product",
+      "description": "NVIDIA announced the Blackwell platform. Blackwell GPUs carry 208 billion transistors on a custom TSMC 4NP process, using two reticle-limited dies joined by a 10 TB/s chip-to-chip link presented to software as a single GPU. The GB200 Grace Blackwell Superchip pairs two B200 GPUs with a Grace CPU, and the GB200 NVL72 liquid-cooled rack connects 36 Superchips, 72 GPUs and 36 CPUs over fifth-generation NVLink.",
+      "businessSignificance": "Blackwell moved NVIDIA's unit of sale from the accelerator to the rack, raising average selling prices by roughly an order of magnitude and pulling networking, DPUs and system integration into NVIDIA's revenue. NVIDIA claimed up to 30x LLM inference performance and up to 25x lower cost and energy versus H100 at equal GPU count.",
+      "quantifiedImpact": "208 billion transistors; 10 TB/s die-to-die interconnect; GB200 NVL72 claimed up to 30x inference performance and up to 25x lower cost and energy versus the same number of H100s.",
+      "marked": true,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing",
+        "https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Blackwell-Platform-Arrives-to-Power-a-New-Era-of-Computing/default.aspx"
+      ]
+    },
+    {
+      "id": "e28",
+      "date": "2024-06-10",
+      "datePrecision": "exact",
+      "title": "Ten-for-one stock split takes effect and quarterly dividend reset",
+      "category": "corporate",
+      "description": "Announced on 22 May 2024, NVIDIA effected a ten-for-one forward split by amending its certificate of incorporation, increasing authorised common stock from 8 billion to 80 billion shares. Holders of record at the close on 6 June 2024 received nine additional shares distributed after the close on 7 June 2024, with split-adjusted trading from 10 June 2024. The quarterly dividend was raised 150 per cent from $0.04 to $0.10 per share, equal to $0.01 post-split.",
+      "businessSignificance": "Beyond accessibility, the lower share price is what made NVIDIA eligible for the price-weighted Dow Jones Industrial Average five months later without distorting the index.",
+      "quantifiedImpact": "10-for-1 ratio; authorised shares increased from 8bn to 80bn; quarterly dividend $0.04 to $0.10 pre-split, equal to $0.01 post-split.",
+      "marked": false,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000144/nvda-20240607.htm",
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000113/nvda-20240522.htm"
+      ]
+    },
+    {
+      "id": "e29",
+      "date": "2024-07-12",
+      "datePrecision": "exact",
+      "title": "SoftBank acquires Graphcore",
+      "category": "competitive",
+      "description": "Graphcore announced it had been acquired by SoftBank Group and would continue as a wholly owned subsidiary under its own name with headquarters in Bristol. Terms were not disclosed. Graphcore had been valued at $2.77 billion at the end of 2020 but had cut headcount by a fifth to 494 employees and closed operations in Norway, Japan and South Korea after failing to secure the investment needed to compete.",
+      "businessSignificance": "Graphcore was the most prominent European attempt at a merchant NVIDIA alternative, and its distressed sale demonstrated that competing on silicon without a comparable software ecosystem and capital base is not viable. It removed a competitor and reinforced the CUDA moat argument.",
+      "quantifiedImpact": "Sale price undisclosed. Prior valuation $2.77bn at end-2020; headcount reduced by roughly 20% to 494 before the sale.",
+      "marked": false,
+      "sources": [
+        "https://www.prnewswire.com/news-releases/graphcore-joins-softbank-group-to-build-next-generation-of-ai-compute-302194707.html",
+        "https://www.reuters.com/technology/artificial-intelligence/japans-softbank-acquires-british-ai-chipmaker-graphcore-2024-07-11/"
+      ]
+    },
+    {
+      "id": "e30",
+      "date": "2024-11-01",
+      "datePrecision": "exact",
+      "title": "Intel abandons its $500 million Gaudi 3 revenue target",
+      "category": "competitive",
+      "description": "On its Q3 2024 earnings call Intel confirmed it would not achieve its target of $500 million in Gaudi accelerator revenue for 2024, with then-CEO Pat Gelsinger citing the product transition from Gaudi 2 to Gaudi 3 and software ease-of-use. Few service providers beyond IBM Cloud committed to the part.",
+      "businessSignificance": "Intel's failure at a target representing well under one per cent of NVIDIA's contemporaneous data-centre revenue confirmed that the barrier to entry is the software stack, not the silicon. It removed the third merchant supplier from serious contention.",
+      "quantifiedImpact": "$500 million 2024 Gaudi revenue target withdrawn; for comparison AMD guided to roughly $3bn of AI GPU revenue for the same year.",
+      "marked": false,
+      "sources": [
+        "https://www.reuters.com/technology/artificial-intelligence/year-intels-touted-ai-chip-deals-have-fallen-short-2024-11-01/",
+        "https://www.crn.com/news/components-peripherals/2025/intel-cancels-falcon-shores-ai-chip-to-focus-on-system-level-solution"
+      ]
+    },
+    {
+      "id": "e31",
+      "date": "2024-11-08",
+      "datePrecision": "exact",
+      "title": "NVIDIA joins the Dow Jones Industrial Average, replacing Intel",
+      "category": "corporate",
+      "description": "S&P Dow Jones Indices announced on 1 November 2024 that NVIDIA would replace Intel in the DJIA effective before the open on 8 November 2024, stating the change was initiated to ensure more representative exposure to the semiconductor industry. Intel had been a component for 25 years.",
+      "businessSignificance": "Inclusion in a price-weighted benchmark forces index-tracking demand and is a formal marker of NVIDIA displacing Intel as the reference US semiconductor company. The June 2024 10-for-1 split was the enabling condition, since persistently high-priced stocks distort the DJIA.",
+      "quantifiedImpact": null,
+      "marked": false,
+      "sources": [
+        "https://press.spglobal.com/2024-11-01-NVIDIA-and-Sherwin-Williams-Set-to-Join-Dow-Jones-Industrial-Average-Vistra-to-Join-Dow-Jones-Utility-Average",
+        "https://www.reuters.com/technology/nvidia-replace-intel-dow-jones-industrial-average-2024-11-01/"
+      ]
+    },
+    {
+      "id": "e32",
+      "date": "2024-12-30",
+      "datePrecision": "exact",
+      "title": "NVIDIA completes $700 million acquisition of Run:ai",
+      "category": "corporate",
+      "description": "NVIDIA completed its acquisition of Israeli GPU orchestration software company Run:ai, announced in April 2024, after the European Commission granted unconditional clearance in December. Run:ai provides Kubernetes-based workload management for GPU infrastructure. NVIDIA committed to open-sourcing the software, later releasing the KAI Scheduler under Apache 2.0.",
+      "businessSignificance": "Run:ai extends NVIDIA's control from silicon into the scheduling layer that determines GPU utilisation, which is the metric enterprises use to justify further purchases. The open-sourcing commitment was the concession that resolved antitrust concern about foreclosing rival accelerators.",
+      "quantifiedImpact": "Approximately $700 million; EU clearance granted unconditionally in December 2024 after an October 2024 review; a US DOJ inquiry was reported as ongoing at close.",
+      "marked": false,
+      "sources": [
+        "https://www.reuters.com/markets/deals/nvidia-closes-700-mln-runai-acquisition-after-regulatory-hurdles-2024-12-30/",
+        "https://blogs.nvidia.com/blog/runai/"
+      ]
+    },
+    {
+      "id": "e33",
+      "date": "2025-01-15",
+      "datePrecision": "exact",
+      "title": "BIS issues the Framework for Artificial Intelligence Diffusion",
+      "category": "regulatory",
+      "description": "BIS published an interim final rule revising EAR controls on advanced computing integrated circuits and adding controls on the model weights of certain advanced closed-weight AI models, structured around country tiers with new licence exceptions and an updated Data Center Validated End User authorisation. The rule was effective 13 January 2025 with a general compliance date of 15 May 2025 and certain provisions delayed to 15 January 2026.",
+      "businessSignificance": "The rule would have converted advanced-accelerator export licensing from a China-specific end-user control into a worldwide destination control with per-country compute caps, exposing NVIDIA's sovereign and Middle East pipeline to licensing risk. Industry opposition was immediate.",
+      "quantifiedImpact": null,
+      "marked": false,
+      "sources": [
+        "https://www.govinfo.gov/content/pkg/FR-2025-01-15/pdf/2025-00636.pdf",
+        "https://www.gao.gov/products/b-337935"
+      ]
+    },
+    {
+      "id": "e34",
+      "date": "2025-01-21",
+      "datePrecision": "exact",
+      "title": "Stargate announced with a stated $500 billion four-year target",
+      "category": "ecosystem",
+      "description": "OpenAI announced Stargate, a new company intending to invest $500 billion over four years in US AI infrastructure for OpenAI, with $100 billion to be deployed immediately. Equity funders were SoftBank, OpenAI, Oracle and MGX, with SoftBank holding financial responsibility and OpenAI operational responsibility. Arm, Microsoft, NVIDIA, Oracle and OpenAI were named as key initial technology partners, with the buildout starting in Texas.",
+      "businessSignificance": "Stargate named NVIDIA as a core technology partner in what was framed as the largest single AI infrastructure programme announced to date, and anchored the multi-gigawatt demand narrative NVIDIA has used since. The headline figure is an aspirational multi-year target rather than committed capital, and execution has since moved substantially to bilateral site-level deals.",
+      "quantifiedImpact": "$500 billion stated four-year investment intent; $100 billion initial deployment phase; five additional US data-centre sites announced 23 September 2025.",
+      "marked": false,
+      "sources": [
+        "https://openai.com/index/announcing-the-stargate-project/",
+        "https://apnews.com/article/trump-ai-openai-oracle-softbank-son-altman-ellison-be261f8a8ee07a0623d4170397348c41",
+        "https://www.reuters.com/business/media-telecom/openai-oracle-softbank-plan-five-new-ai-data-centers-500-billion-stargate-2025-09-23/"
+      ]
+    },
+    {
+      "id": "e35",
+      "date": "2025-01-27",
+      "datePrecision": "exact",
+      "title": "DeepSeek R1 triggers a record single-day market-value loss",
+      "category": "market-shock",
+      "description": "Chinese startup DeepSeek released R1, an open-weight reasoning model claimed to match leading US models at far lower training cost, and its free assistant overtook ChatGPT in US App Store downloads. NVIDIA shares fell just under 17 per cent, erasing $593 billion of market value, the largest single-day market-capitalisation loss for any company on record per LSEG data. Semiconductor, power and AI-infrastructure companies collectively shed more than $1 trillion. NVIDIA recovered 8.9 per cent the following session.",
+      "businessSignificance": "The event was the first serious market test of the assumption that frontier AI capability requires ever-increasing compute. It did not change NVIDIA's demand trajectory, but it introduced a persistent efficiency-risk discount into the equity story and made algorithmic efficiency a standing question at every subsequent earnings call.",
+      "quantifiedImpact": "$593 billion of NVIDIA market value lost in one session; share price down 16.9%; Nasdaq Composite down 3.1%; Broadcom down 17.4%; more than $1 trillion of combined AI-linked market value erased.",
+      "marked": true,
+      "sources": [
+        "https://www.reuters.com/technology/chinas-deepseek-sets-off-ai-market-rout-2025-01-27/",
+        "https://www.reuters.com/technology/tech-stock-selloff-deepens-deepseek-triggers-ai-rethink-2025-01-28/"
+      ]
+    },
+    {
+      "id": "e36",
+      "date": "2025-01-30",
+      "datePrecision": "exact",
+      "title": "Intel cancels commercial launch of Falcon Shores",
+      "category": "competitive",
+      "description": "On Intel's Q4 2024 earnings call, co-CEO Michelle Johnston Holthaus said Intel would use Falcon Shores as an internal test chip only rather than bringing it to market, and would redirect resources toward a rack-scale system-level product codenamed Jaguar Shores. She acknowledged Intel was not participating meaningfully in the cloud AI data-centre market.",
+      "businessSignificance": "Intel's exit from the merchant AI accelerator market for at least one generation left AMD as the only alternative merchant supplier and removed the most plausible source of price competition in NVIDIA's core market through 2026.",
+      "quantifiedImpact": null,
+      "marked": false,
+      "sources": [
+        "https://techcrunch.com/2025/01/30/intel-wont-bring-its-falcon-shores-ai-chip-to-market/",
+        "https://www.crn.com/news/components-peripherals/2025/intel-cancels-falcon-shores-ai-chip-to-focus-on-system-level-solution"
+      ]
+    },
+    {
+      "id": "e37",
+      "date": "2025-02-26",
+      "datePrecision": "exact",
+      "title": "Blackwell delivers $11 billion in its first full quarter",
+      "category": "product",
+      "description": "NVIDIA reported fiscal Q4 2025 revenue of $39.3 billion, up 78 per cent year over year, including $11.0 billion of Blackwell architecture revenue. CFO Colette Kress described it as the fastest product ramp in the company's history and said Blackwell sales were led by large cloud service providers, which represented approximately 50 per cent of data-centre revenue. Full-year fiscal 2025 revenue was $130.5 billion, up 114 per cent.",
+      "businessSignificance": "The ramp settled outstanding questions about Blackwell manufacturing readiness and demonstrated that NVIDIA could transition an entire product generation without a revenue air pocket, while accepting low-70s gross margins during the ramp in exchange for speed.",
+      "quantifiedImpact": "$11.0bn Blackwell revenue in Q4 FY2025; quarterly revenue $39.3bn (+78% Y/Y); FY2025 revenue $130.5bn (+114%); large CSPs approximately 50% of data-centre revenue.",
+      "marked": false,
+      "sources": [
+        "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2025/",
+        "https://www.cnbc.com/2025/02/26/nvidia-nvda-earnings-report-q4-2025.html"
+      ]
+    },
+    {
+      "id": "e38",
+      "date": "2025-03-18",
+      "datePrecision": "exact",
+      "title": "Blackwell Ultra and GB300 NVL72 announced at GTC",
+      "category": "product",
+      "description": "NVIDIA announced Blackwell Ultra, comprising the GB300 NVL72 rack-scale system and HGX B300 NVL16. The B300 raises HBM3e memory to 288GB per GPU from 192GB and delivers roughly 14-15 petaflops of dense FP4. NVIDIA quoted GB300 NVL72 at 1.5x the AI performance of GB200 NVL72 and 1.1 exaflops of dense FP4, with partner availability from the second half of 2025.",
+      "businessSignificance": "Blackwell Ultra was a mid-cycle memory-and-inference refresh rather than a new architecture, aimed specifically at test-time-scaling reasoning workloads. It kept NVIDIA on an annual cadence and, per NVIDIA, raised the AI-factory revenue opportunity 50x relative to Hopper-based builds.",
+      "quantifiedImpact": "288GB HBM3e per GPU (from 192GB); 1.1 exaFLOPS dense FP4 per GB300 NVL72 rack; 20TB HBM3e per rack; NVIDIA-claimed 1.5x AI performance versus GB200 NVL72.",
+      "marked": false,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-blackwell-ultra-ai-factory-platform-paves-way-for-age-of-ai-reasoning",
+        "https://developer.nvidia.com/blog/inside-nvidia-blackwell-ultra-the-chip-powering-the-ai-factory-era/"
+      ]
+    },
+    {
+      "id": "e39",
+      "date": "2025-04-09",
+      "datePrecision": "exact",
+      "title": "H20 export licence requirement imposed; $4.5 billion charge",
+      "category": "regulatory",
+      "description": "The US government informed NVIDIA on 9 April 2025 that a licence is required for export to China, Hong Kong, Macau and D:5 countries, or to companies headquartered or ultimately parented there, of H20 integrated circuits and any circuit achieving comparable memory or interconnect bandwidth. On 14 April NVIDIA was told the requirement would be in effect indefinitely. NVIDIA initially guided to up to $5.5 billion of charges and ultimately recorded $4.5 billion in fiscal Q1 2026 for H20 excess inventory and purchase obligations.",
+      "businessSignificance": "The H20 had been designed specifically to be exportable under the 2023 thresholds, so the action established that compliant design offers no durable protection. It removed the largest remaining China revenue line and led NVIDIA to exclude China data-centre compute from guidance thereafter.",
+      "quantifiedImpact": "$4.5bn charge in Q1 FY2026 (initial estimate up to $5.5bn); $4.6bn of H20 sales recognised before the restriction; $2.5bn of H20 revenue unshippable in Q1; approximately $8bn of expected Q2 H20 revenue foregone; Q1 FY2026 non-GAAP gross margin 61.0% versus 71.3% excluding the charge.",
+      "marked": true,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2026",
+        "https://www.reuters.com/technology/nvidia-expects-up-55-billion-charge-first-quarter-2025-04-15/"
+      ]
+    },
+    {
+      "id": "e40",
+      "date": "2025-05-13",
+      "datePrecision": "exact",
+      "title": "Commerce announces rescission and non-enforcement of the AI Diffusion Rule",
+      "category": "regulatory",
+      "description": "The Department of Commerce announced it would rescind the AI Diffusion Rule two days before its compliance date, with Under Secretary Jeffery Kessler instructing BIS enforcement not to enforce it, on the grounds that it would stifle American innovation and downgrade dozens of countries to second-tier status. BIS said it would publish a formalising regulation and issue a replacement rule in future. The GAO later concluded the press release itself constituted a rule subject to Congressional Review Act submission requirements.",
+      "businessSignificance": "Rescission removed a worldwide licensing overhang and reopened the Middle East and sovereign-AI pipeline, but it reverted licensing to the November 2023 end-user control rather than eliminating it. The absence of a published replacement rule left NVIDIA operating under guidance rather than regulation for more than a year.",
+      "quantifiedImpact": null,
+      "marked": false,
+      "sources": [
+        "https://www.bis.gov/press-release/department-commerce-announces-rescission-biden-era-artificial-intelligence-diffusion-rule-strengthens",
+        "https://www.gao.gov/products/b-337935"
+      ]
+    },
+    {
+      "id": "e41",
+      "date": "2025-06-12",
+      "datePrecision": "exact",
+      "title": "AMD launches Instinct MI350 series and previews MI400 and Helios",
+      "category": "competitive",
+      "description": "AMD launched the CDNA 4-based Instinct MI350 series with 288GB HBM3E and 8TB/s bandwidth per GPU, alongside ROCm 7.0. At the same event AMD previewed the MI400 series and the Helios rack reference design for 2026, unifying EPYC Venice CPUs, MI400 GPUs and Pensando Vulcano NICs with a scale-up domain of up to 72 GPUs and 260 TB/s of scale-up bandwidth.",
+      "businessSignificance": "MI350 matched Blackwell Ultra on per-GPU memory capacity, and Helios is AMD's first attempt to compete at rack scale rather than at the accelerator level, which is the layer where NVIDIA captures the most value. Execution against the 2026 Helios timeline is the main variable in whether AMD becomes a genuine second source.",
+      "quantifiedImpact": "MI350X: 288GB HBM3E, 8TB/s bandwidth; AMD-claimed up to 4x generational AI compute improvement and up to 35x inference improvement; Helios: up to 72 MI400-series GPUs and 260 TB/s scale-up bandwidth, targeted at 2026.",
+      "marked": false,
+      "sources": [
+        "https://www.amd.com/en/blogs/2025/amd-instinct-mi350-series-and-beyond-accelerating-the-future-of-ai-and-hpc.html",
+        "https://www.amd.com/en/products/accelerators/instinct/mi350/mi350x.html"
+      ]
+    },
+    {
+      "id": "e42",
+      "date": "2025-07-09",
+      "datePrecision": "exact",
+      "title": "NVIDIA becomes the first company to reach a $4 trillion market capitalisation",
+      "category": "corporate",
+      "description": "NVIDIA briefly crossed $4 trillion in market value in early trading on 9 July 2025, the first public company to do so. It had first reached $1 trillion in June 2023, $2 trillion in February 2024 and $3 trillion in June 2024.",
+      "businessSignificance": "The milestone marks the completion of NVIDIA's transition from a cyclical semiconductor company to the largest company in the world by market value, and made its capital allocation and supply decisions systemically relevant to equity indices.",
+      "quantifiedImpact": "$4 trillion market capitalisation; $1tn first reached June 2023, $2tn February 2024, $3tn June 2024; shares rose 171% in calendar 2024.",
+      "marked": false,
+      "sources": [
+        "https://www.aljazeera.com/economy/2025/7/9/nvidia-becomes-first-us-company-to-reach-4-trillion-market-cap",
+        "https://apnews.com/article/nvidia-trillion-ai-apple-huang-trump-xi-c9bbf5cfa017dadaf248a4d197763cb9"
+      ]
+    },
+    {
+      "id": "e43",
+      "date": "2025-08-11",
+      "datePrecision": "exact",
+      "title": "US agrees to licence H20 China sales in exchange for a 15 per cent revenue share",
+      "category": "regulatory",
+      "description": "Following a meeting between Jensen Huang and President Trump, the administration agreed to grant H20 export licences in return for the US government receiving 15 per cent of NVIDIA's revenue from those sales; an equivalent arrangement was applied to AMD's MI308. Trump confirmed he had initially asked for 20 per cent. Commerce began granting licences two days after the meeting. NVIDIA's CFO subsequently stated that officials had expressed the expectation but that no regulation codifying it had been published, and NVIDIA disclosed in its SEC filing that any such revenue-share request could subject it to litigation.",
+      "businessSignificance": "The arrangement created a new and legally untested category of export cost. Legal commentators and lawmakers argued it may conflict with the Constitution's ban on export taxes and the Export Control Reform Act, leaving NVIDIA exposed to retrospective challenge, while Chinese buyers largely declined to purchase.",
+      "quantifiedImpact": "15% of licensed H20 China revenue payable to the US government; Bernstein estimated the arrangement could yield more than $2bn to the US government on expected sales of over $15bn (NVIDIA) and $800m (AMD) through year-end. NVIDIA reported no H20 sales made under the licences as of its Q2 FY2026 call.",
+      "marked": false,
+      "sources": [
+        "https://www.reuters.com/legal/government/trumps-unusual-nvidia-deal-raises-new-corporate-national-security-risks-2025-08-12/",
+        "https://www.bbc.com/news/articles/cvgvvnx8y19o",
+        "https://www.cnbc.com/2025/08/11/trump-nvidia-20percent-cut-h20-obsolete-chip.html"
+      ]
+    },
+    {
+      "id": "e44",
+      "date": "2025-09-18",
+      "datePrecision": "exact",
+      "title": "NVIDIA invests $5 billion in Intel and agrees joint product development",
+      "category": "corporate",
+      "description": "NVIDIA agreed to invest $5 billion in Intel common stock at $23.28 per share, taking roughly 4 per cent of the company, alongside a collaboration to co-develop multiple generations of custom data-centre and PC products connected by NVLink. Intel will build NVIDIA-custom x86 CPUs for NVIDIA's AI platforms and x86 SoCs integrating NVIDIA RTX GPU chiplets for PCs. The agreement does not include a foundry arrangement.",
+      "businessSignificance": "The investment secures a second, US-based x86 CPU supply path for NVIDIA's rack systems and a route into integrated gaming SoCs against AMD, while giving Intel capital and a flagship customer. It also aligns NVIDIA with the administration's domestic-manufacturing agenda at a moment when its China access depends on political goodwill.",
+      "quantifiedImpact": "$5 billion at $23.28 per share, approximately 4% of Intel post-issuance; Intel shares rose 23% on the announcement.",
+      "marked": false,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-and-intel-to-develop-ai-infrastructure-and-personal-computing-products",
+        "https://www.reuters.com/world/asia-pacific/nvidia-bets-big-intel-with-5-billion-stake-chip-partnership-2025-09-18/"
+      ]
+    },
+    {
+      "id": "e45",
+      "date": "2025-09-22",
+      "datePrecision": "exact",
+      "title": "NVIDIA and OpenAI sign a letter of intent for 10 gigawatts and up to $100 billion",
+      "category": "ecosystem",
+      "description": "NVIDIA and OpenAI announced a letter of intent for a strategic partnership to deploy at least 10 gigawatts of NVIDIA systems, representing millions of GPUs, for OpenAI's next-generation infrastructure. NVIDIA stated it intends to invest up to $100 billion in OpenAI progressively as each gigawatt is deployed. The first gigawatt is targeted for the second half of 2026 on the Vera Rubin platform.",
+      "businessSignificance": "The structure is circular by design: NVIDIA takes non-voting equity in OpenAI, which uses the cash to buy NVIDIA systems. It secures anchor demand for the Rubin generation but concentrates counterparty exposure and has drawn scrutiny over vendor financing. It is a letter of intent staged against deployment, not committed capital.",
+      "quantifiedImpact": "At least 10 GW of NVIDIA systems; up to $100 billion investment released progressively per gigawatt; first gigawatt targeted for H2 2026 on Vera Rubin.",
+      "marked": false,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/openai-and-nvidia-announce-strategic-partnership-to-deploy-10gw-of-nvidia-systems",
+        "https://openai.com/index/openai-nvidia-systems-partnership/",
+        "https://www.reuters.com/business/nvidia-invest-100-billion-openai-2025-09-22/"
+      ]
+    },
+    {
+      "id": "e46",
+      "date": "2025-10-06",
+      "datePrecision": "exact",
+      "title": "AMD and OpenAI agree a 6 gigawatt deployment with a 160 million share warrant",
+      "category": "competitive",
+      "description": "AMD and OpenAI announced a definitive multi-year, multi-generation agreement for 6 gigawatts of AMD Instinct GPUs, beginning with a 1 gigawatt MI450 deployment in the second half of 2026. AMD issued OpenAI a warrant for up to 160 million AMD shares at $0.01, vesting in tranches tied to deployment milestones and to AMD share-price targets.",
+      "businessSignificance": "This is the first multi-gigawatt commitment by a frontier lab to a non-NVIDIA merchant supplier and the clearest evidence that the largest buyers intend to engineer a second source. The warrant structure transfers most of the execution risk to AMD while giving OpenAI equity upside for validating the platform.",
+      "quantifiedImpact": "6 GW total; initial 1 GW of MI450-series from H2 2026; warrant for up to 160 million AMD shares at $0.01 each; AMD shares rose more than 20% on announcement.",
+      "marked": false,
+      "sources": [
+        "https://ir.amd.com/news-events/press-releases/detail/1260/amd-and-openai-announce-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus"
+      ]
+    },
+    {
+      "id": "e47",
+      "date": "2025-10-13",
+      "datePrecision": "exact",
+      "title": "OpenAI and Broadcom agree to co-develop 10 gigawatts of custom accelerators",
+      "category": "competitive",
+      "description": "OpenAI and Broadcom announced a collaboration under which OpenAI designs its own accelerators and systems, developed and deployed with Broadcom and scaled entirely with Broadcom Ethernet and connectivity. Rack deployment is targeted to begin in the second half of 2026 and complete by the end of 2029.",
+      "businessSignificance": "A 10 gigawatt custom-silicon programme at OpenAI, on the same timeline as the 10 gigawatt NVIDIA partnership and the 6 gigawatt AMD agreement, signals a deliberate three-way supply strategy. Broadcom's XPU model is the structural threat to NVIDIA because it lets the largest buyers convert their own workload knowledge into silicon without building a chip company.",
+      "quantifiedImpact": "10 GW of OpenAI-designed accelerators; deployment H2 2026 to end-2029.",
+      "marked": false,
+      "sources": [
+        "https://openai.com/index/openai-and-broadcom-announce-strategic-collaboration/",
+        "https://investors.broadcom.com/news-releases/news-release-details/openai-and-broadcom-announce-strategic-collaboration-deploy-10"
+      ]
+    },
+    {
+      "id": "e48",
+      "date": "2025-10-28",
+      "datePrecision": "exact",
+      "title": "NVIDIA discloses $500 billion of cumulative Blackwell and Rubin bookings",
+      "category": "corporate",
+      "description": "At GTC Washington DC, Jensen Huang disclosed visibility into half a trillion dollars of cumulative Blackwell and early Rubin revenue over the following five quarters through 2026, explicitly excluding China and Asia. He stated 6 million Blackwell GPUs had shipped in the first four quarters of production, against 4 million Hopper GPUs over that product's entire life, and projected about 20 million units across Blackwell and early Rubin. NVIDIA also announced seven supercomputers for the US Department of Energy.",
+      "businessSignificance": "This was an unusual forward-bookings disclosure for a semiconductor company and was intended to answer AI-bubble scepticism with backlog rather than forecast. It reframed the investment debate from whether demand exists to whether supply and power can be delivered.",
+      "quantifiedImpact": "$500 billion cumulative Blackwell and Rubin bookings across five quarters through 2026, excluding China and Asia; 6 million Blackwell GPUs shipped in four quarters versus 4 million Hopper across its full life; approximately 5x Hopper's growth rate. Shares rose about 5% on 28 October 2025.",
+      "marked": false,
+      "sources": [
+        "https://finance.yahoo.com/news/nvidia-build-ai-supercomputers-us-191932227.html",
+        "https://www.crn.com/news/ai/2025/7-big-nvidia-products-partnerships-and-takeaways-from-gtc-dc-2025"
+      ]
+    },
+    {
+      "id": "e49",
+      "date": "2025-10-29",
+      "datePrecision": "exact",
+      "title": "NVIDIA becomes the first company to exceed a $5 trillion valuation",
+      "category": "corporate",
+      "description": "NVIDIA shares rose more than 3 per cent to close at $207.04, giving a market capitalisation of $5.03 trillion on 24.3 billion shares outstanding, the first company to cross the threshold and just under four months after first reaching $4 trillion.",
+      "businessSignificance": "The pace of the $4 trillion to $5 trillion move, compressed into under four months, both reflected the $500 billion bookings disclosure the previous day and intensified the debate over whether AI infrastructure valuations had decoupled from realised cash flows.",
+      "quantifiedImpact": "$5.03 trillion market capitalisation at a $207.04 close on 24.3 billion shares; stock up more than 50% in calendar 2025 to that date.",
+      "marked": true,
+      "sources": [
+        "https://apnews.com/article/nvidia-trillion-ai-apple-huang-trump-xi-c9bbf5cfa017dadaf248a4d197763cb9",
+        "https://www.cnbc.com/2025/10/29/nvidia-on-track-to-hit-historic-5-trillion-valuation-amid-ai-rally.html"
+      ]
+    },
+    {
+      "id": "e50",
+      "date": "2025-11-06",
+      "datePrecision": "exact",
+      "title": "Google makes Ironwood TPU generally available; Anthropic to access up to one million TPUs",
+      "category": "competitive",
+      "description": "Google announced general availability of Ironwood, its seventh-generation TPU, first introduced for testing in April 2025. Ironwood offers 192GB HBM3e and 2,307 BF16 TFLOPs per chip, scales to pods of 9,216 chips, and Google quotes a 10x peak performance improvement over TPU v5p and more than 4x per chip over Trillium. Google stated Anthropic plans to access up to 1 million TPUs.",
+      "businessSignificance": "Ironwood is the most mature non-NVIDIA accelerator by deployment scale, and its availability to external customers including Anthropic, Apple, Cohere and Safe Superintelligence converts Google's internal silicon into a merchant competitor. The 9,216-chip pod domain exceeds NVIDIA's 72-GPU NVLink domain, which is a genuine architectural differentiation at very large scale.",
+      "quantifiedImpact": "192 GiB HBM per chip at 7,380 GBps; 9,216 chips per pod; Google-quoted 10x over TPU v5p and 4x per chip over Trillium; Anthropic access to up to 1 million TPUs.",
+      "marked": false,
+      "sources": [
+        "https://cloud.google.com/blog/products/compute/ironwood-tpus-and-new-axion-based-vms-for-your-ai-workloads",
+        "https://www.cnbc.com/2025/11/06/google-unveils-ironwood-seventh-generation-tpu-competing-with-nvidia.html",
+        "https://docs.cloud.google.com/tpu/docs/tpu7x"
+      ]
+    },
+    {
+      "id": "e51",
+      "date": "2025-11-18",
+      "datePrecision": "exact",
+      "title": "Microsoft, NVIDIA and Anthropic announce reciprocal investment and compute commitments",
+      "category": "ecosystem",
+      "description": "Anthropic committed to purchase $30 billion of Azure compute capacity and to contract additional capacity up to one gigawatt, initially on NVIDIA Grace Blackwell and Vera Rubin systems. NVIDIA committed to invest up to $10 billion and Microsoft up to $5 billion in Anthropic, and NVIDIA and Anthropic established a first-time technology partnership on co-optimisation of models and future architectures.",
+      "businessSignificance": "The deal brings the last major frontier lab that had been standardised on Google TPUs and AWS Trainium onto NVIDIA hardware, closing a competitive gap. It reportedly valued Anthropic at around $350 billion, up from $183 billion in September 2025, and further extends the pattern of NVIDIA taking equity positions in its own demand.",
+      "quantifiedImpact": "$30 billion Azure compute commitment plus up to 1 GW additional capacity; NVIDIA investing up to $10 billion and Microsoft up to $5 billion; Anthropic valuation reported at approximately $350 billion versus $183 billion in September 2025.",
+      "marked": false,
+      "sources": [
+        "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+        "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
+        "https://www.cnbc.com/2025/11/18/anthropic-ai-azure-microsoft-nvidia.html"
+      ]
+    },
+    {
+      "id": "e52",
+      "date": "2025-12-02",
+      "datePrecision": "exact",
+      "title": "AWS makes Trainium3 UltraServers generally available",
+      "category": "competitive",
+      "description": "At re:Invent, AWS announced general availability of Trn3 UltraServers powered by Trainium3, its first 3nm AI chip, scaling to 144 chips per system and delivering up to 362 FP8 petaflops. AWS quotes up to 4.4x more compute, 4x greater energy efficiency and nearly 4x more memory bandwidth than Trainium2 UltraServers. AWS also disclosed that Project Rainier, built with Anthropic, connected more than 500,000 Trainium2 chips, with Anthropic expected to be on more than 1 million Trainium2 chips.",
+      "businessSignificance": "Trainium is the largest deployed non-NVIDIA training fleet by chip count and its cost claims, up to 50 per cent lower training and inference costs for named customers, apply direct price pressure at the inference layer where NVIDIA's margin is most exposed.",
+      "quantifiedImpact": "Up to 144 Trainium3 chips per UltraServer; 362 FP8 PFLOPs; up to 4.4x compute and 4x energy efficiency versus Trainium2; Project Rainier at more than 500,000 Trainium2 chips scaling toward 1 million.",
+      "marked": false,
+      "sources": [
+        "https://www.businesswire.com/news/home/20251201046353/en/Trainium3-UltraServers-Now-Available-Enabling-Customers-to-Train-and-Deploy-AI-Models-Faster-at-Lower-Cost",
+        "https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster"
+      ]
+    },
+    {
+      "id": "e53",
+      "date": "2025-12-08",
+      "datePrecision": "exact",
+      "title": "US approves H200 sales to approved Chinese customers in exchange for a 25 per cent cut",
+      "category": "regulatory",
+      "description": "President Trump announced that the US government would approve China sales of the H200 and equivalent products in exchange for a 25 per cent cut of the revenue. This marked a significant easing relative to the April 2025 position, moving the permitted ceiling from the purpose-built H20 up to the second-most capable Hopper part.",
+      "businessSignificance": "The decision restored a theoretical path to a market that supplied roughly a quarter of NVIDIA revenue as recently as 2022, but NVIDIA continued to exclude China data-centre compute revenue from guidance, and CEO Jensen Huang told investors in May 2026 to 'expect nothing' from Chinese sales.",
+      "quantifiedImpact": "25% of H200 China sale revenue payable to the US government; structure requires shipments to transit US territory because direct export fees are not permitted under US law.",
+      "marked": false,
+      "sources": [
+        "https://www.cnbc.com/2026/07/14/nvidia-h200-ai-chips-china.html",
+        "https://theedgemalaysia.com/node/810780"
+      ]
+    },
+    {
+      "id": "e54",
+      "date": "2025-12-11",
+      "datePrecision": "exact",
+      "title": "Broadcom reports $20 billion of fiscal 2025 AI revenue and a $73 billion AI backlog",
+      "category": "competitive",
+      "description": "Broadcom closed fiscal 2025 with record revenue of $64 billion, including $20 billion of AI revenue, up 65 per cent. Q4 AI semiconductor revenue rose 74 per cent to $6.5 billion as the custom accelerator business more than doubled. Broadcom disclosed AI orders on hand exceeding $73 billion to ship over 18 months, almost half of a record $162 billion consolidated backlog, added an $11 billion follow-on Anthropic order and a fifth XPU customer via a $1 billion order, and guided Q1 fiscal 2026 AI revenue to double to $8.2 billion.",
+      "businessSignificance": "Broadcom is the only competitor whose AI revenue is both large and disclosed, and its XPU model is structurally different from AMD's or Intel's: it does not sell a competing GPU but enables the largest buyers to design around NVIDIA entirely. The AI switch backlog above $10 billion also competes directly with NVIDIA's networking segment.",
+      "quantifiedImpact": "FY2025 AI revenue $20bn (+65%); Q4 AI semiconductor revenue $6.5bn (+74%); AI backlog above $73bn for delivery over 18 months out of $162bn total; AI switch backlog above $10bn; Q1 FY2026 AI revenue guided to $8.2bn.",
+      "marked": false,
+      "sources": [
+        "https://www.crn.com/news/components-peripherals/2025/broadcom-ceo-hock-tan-on-ai-semiconductor-vmware-anthropic-and-other-fy2025-drivers",
+        "https://mlq.ai/earnings/highlight/AVGO-broadcoms-ai-backlog-exceeds-73-billio-d7e9e6/"
+      ]
+    },
+    {
+      "id": "e55",
+      "date": "2025-12-24",
+      "datePrecision": "exact",
+      "title": "NVIDIA licenses Groq's inference technology and hires its senior leadership",
+      "category": "corporate",
+      "description": "Groq disclosed that it had entered a non-exclusive licensing agreement with NVIDIA for its inference technology, with founder and CEO Jonathan Ross, president Sunny Madra and other senior leaders joining NVIDIA. Groq continues to operate independently. Jensen Huang told employees NVIDIA plans to integrate Groq's low-latency processors and is 'not acquiring Groq as a company'. NVIDIA issued no press release or SEC filing; CNBC reported a price of about $20 billion in cash, citing lead investor Alex Davis of Disruptive.",
+      "businessSignificance": "Structuring the transaction as a licence and talent hire rather than an acquisition avoids merger review while transferring the assets, and analysts noted antitrust as the primary risk. Groq's LPU technology was subsequently integrated into the Vera Rubin platform, indicating NVIDIA views specialised low-latency inference silicon as a gap in its own roadmap.",
+      "quantifiedImpact": "Reported at approximately $20 billion in cash, not confirmed by NVIDIA; Groq had raised $750 million in September 2025 at a $6.9 billion valuation, implying a large premium. NVIDIA held $60.6 billion in cash and short-term investments at end-October 2025.",
+      "marked": false,
+      "sources": [
+        "https://www.cnbc.com/2025/12/26/nvidia-groq-deal-is-structured-to-keep-fiction-of-competition-alive.html",
+        "https://www.businessinsider.com/nvidia-reaches-licensing-agreement-with-groq-hires-ai-top-talent-2025-12"
+      ]
+    },
+    {
+      "id": "e56",
+      "date": "2026-01-06",
+      "datePrecision": "month (January 2026, unveiled at CES)",
+      "title": "Rubin platform unveiled with six new chips",
+      "category": "product",
+      "description": "NVIDIA unveiled the Rubin platform, comprising six new chips: the Vera CPU, Rubin GPU, NVLink 6 switch, ConnectX-9 SuperNIC, BlueField-4 DPU and Spectrum-6 Ethernet switch. NVIDIA stated the platform would train mixture-of-experts models with one quarter the number of GPUs and reduce inference token cost by up to 10x versus Blackwell. AWS, Google Cloud, Microsoft Azure and Oracle Cloud Infrastructure were named as among the first to deploy Vera Rubin instances.",
+      "businessSignificance": "Rubin is the first architecture designed after the shift from training-dominated to inference-dominated demand, and the token-cost claim is the commercially relevant metric for customers whose constraint is power rather than capital. It also marks NVIDIA making the CPU, DPU and both networking fabrics co-designed parts of a single sale.",
+      "quantifiedImpact": "Six new chips; NVIDIA-claimed up to 10x reduction in inference token cost versus Blackwell and MoE training with one quarter the GPUs.",
+      "marked": false,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026",
+        "https://www.fool.com/earnings/call-transcripts/2026/02/25/nvidia-nvda-q4-2026-earnings-call-transcript/"
+      ]
+    },
+    {
+      "id": "e57",
+      "date": "2026-01-15",
+      "datePrecision": "month (January 2026; Commerce rule formalising the December 2025 H200 decision)",
+      "title": "Commerce codifies H200 China sales with verified-buyer conditions and a 25 per cent levy",
+      "category": "regulatory",
+      "description": "The Commerce Department issued a rule formalising the H200 decision, limiting sales to verified Chinese buyers and setting a 25 per cent US levy on shipments. Applicants must confirm the technology will not be used for Chinese military end uses or end users, including nuclear, missile, chemical or biological weapons purposes, must demonstrate sufficient security procedures, and must submit to inspections. Roughly ten Chinese firms including Alibaba, Tencent, ByteDance and JD.com were subsequently approved, along with distributors including Lenovo and Foxconn, with each approved customer permitted up to 75,000 chips.",
+      "businessSignificance": "This converted an informal political arrangement into published regulation, reducing the legal exposure NVIDIA had flagged around the 2025 revenue-share expectation. Commercially it has produced almost nothing, because Beijing has discouraged domestic firms from purchasing in order to protect its own semiconductor industry.",
+      "quantifiedImpact": "25% US levy on H200 China shipments; approximately 10 approved Chinese purchasers; up to 75,000 chips per approved customer under licensing terms.",
+      "marked": false,
+      "sources": [
+        "https://theedgemalaysia.com/node/810780",
+        "https://www.geo.tv/latest/664345-us-clears-h200-chip-sales-to-10-china-firms-as-nvidia-ceo-looks-for-breakthrough"
+      ]
+    },
+    {
+      "id": "e58",
+      "date": "2026-01-26",
+      "datePrecision": "exact",
+      "title": "Microsoft launches Maia 200",
+      "category": "competitive",
+      "description": "Microsoft announced Maia 200, its second-generation custom accelerator and first built specifically for large-scale inference, on TSMC 3nm with 140 billion transistors, 216GB HBM3e, 7TB/s memory bandwidth and more than 10 petaflops of FP4. Microsoft quoted 30 per cent better performance per dollar than the current fleet generation. Initial deployments are in Iowa and Arizona, serving OpenAI production models, Microsoft 365 Copilot and Foundry. It is not available for external purchase or per-chip cloud rental.",
+      "businessSignificance": "Maia 200 is the last of the four major hyperscalers to field a production inference accelerator, completing the pattern in which every large NVIDIA customer now has an internal alternative for at least part of its inference load. Its predecessor Maia 100 never reached customer rental, so this is Microsoft's first genuine deployment at scale, years behind Google and AWS.",
+      "quantifiedImpact": "140 billion transistors on TSMC N3; 216GB HBM3e at 7 TB/s; >10 PFLOPS FP4; 750W TDP; clusters up to 6,144 accelerators; Microsoft-quoted 30% better performance per dollar.",
+      "marked": false,
+      "sources": [
+        "https://finance.yahoo.com/news/microsoft-launches-maia-200-ai-192556018.html",
+        "https://awesomeagents.ai/hardware/microsoft-maia-200/"
+      ]
+    },
+    {
+      "id": "e59",
+      "date": "2026-02-17",
+      "datePrecision": "exact",
+      "title": "NVIDIA and Meta announce a multiyear, multigenerational infrastructure partnership",
+      "category": "ecosystem",
+      "description": "NVIDIA announced a multiyear, multigenerational strategic partnership with Meta spanning on-premises, cloud and AI infrastructure, covering large-scale deployment of NVIDIA CPUs and millions of Blackwell and Rubin GPUs, plus Spectrum-X Ethernet switches for Meta's Facebook Open Switching System. Meta becomes the first large-scale deployer of Grace CPUs as standalone chips, with Vera CPUs targeted for 2027. Financial terms were not disclosed.",
+      "businessSignificance": "Meta had been the most credible defector, running its own MTIA silicon, buying AMD, and reportedly evaluating Google TPUs. Securing millions of GPUs plus a standalone CPU beachhead at Meta both protects a top-tier customer and opens a new product category for NVIDIA CPUs sold without an attached GPU.",
+      "quantifiedImpact": "Millions of Blackwell and Rubin GPUs; first large-scale standalone Grace CPU deployment; part of Meta's stated commitment to spend $600 billion in the US by 2028 on data centres and supporting infrastructure.",
+      "marked": false,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/meta-builds-ai-infrastructure-with-nvidia",
+        "https://www.cnbc.com/2026/02/17/meta-nvidia-deal-ai-data-center-chips.html"
+      ]
+    },
+    {
+      "id": "e60",
+      "date": "2026-02-25",
+      "datePrecision": "period (fiscal years 2024-2026, per FY2026 Form 10-K filed 25 February 2026)",
+      "title": "China falls to 9 per cent of NVIDIA revenue",
+      "category": "regulatory",
+      "description": "NVIDIA's fiscal 2026 Form 10-K discloses revenue from customers headquartered in China including Hong Kong of $19,677 million on total revenue of $215,938 million, or 9.1 per cent, against $25,048 million of $130,497 million (19.2 per cent) in fiscal 2025 and $12,330 million of $60,922 million (20.2 per cent) in fiscal 2024. Revenue from customers headquartered outside the United States fell to 31 per cent of total from 41 and 48 per cent in the two prior years. Bloomberg reporting notes China supplied roughly a quarter of NVIDIA revenue as recently as 2022, with sales now below 10 per cent and mostly PC graphics rather than AI accelerators.",
+      "businessSignificance": "The structural de-weighting of China means further restriction now has limited incremental revenue effect, but it also means any reopening is upside that is not in guidance. The corollary is extreme concentration in US-headquartered customers, at 69 per cent of fiscal 2026 revenue.",
+      "quantifiedImpact": "China (incl. Hong Kong) revenue: FY2024 $12,330m (20.2%), FY2025 $25,048m (19.2%), FY2026 $19,677m (9.1%), all on the recast customer-headquarters basis. Non-US-headquartered revenue: 48%, 41%, 31% for FY2024-26. United States FY2026: $149,617m (69.3%).",
+      "marked": false,
+      "sources": [
+        "https://app.edgar.tools/companies/NVDA/disclosures/segments",
+        "https://investor.nvidia.com/financial-info/sec-filings/sec-filings-details/default.aspx?FilingId=19184805",
+        "https://theedgemalaysia.com/node/810780"
+      ]
+    },
+    {
+      "id": "e61",
+      "date": "2026-02-25",
+      "datePrecision": "exact",
+      "title": "Fiscal 2026 results: $215.9 billion revenue, data centre at $193.7 billion",
+      "category": "corporate",
+      "description": "NVIDIA reported fiscal Q4 2026 revenue of $68.1 billion, up 73 per cent year over year, and full-year fiscal 2026 revenue of $215.9 billion, up 65 per cent. Data-centre revenue was $62.3 billion in the quarter and $193.7 billion for the year, up 68 per cent. Management said sequential revenue growth would continue throughout calendar 2026, exceeding what was included in the $500 billion Blackwell and Rubin opportunity, with supply commitments extending into calendar 2027. Segment operating income was $139.3 billion.",
+      "businessSignificance": "Fiscal 2026 confirms the scale shift: data-centre revenue alone is roughly 13x its level at the emergence of ChatGPT, and networking has grown into a $31.4 billion business. Customer concentration also intensified, with one direct customer at 22 per cent and another at 14 per cent of total revenue, up from a maximum of 13 per cent two years earlier.",
+      "quantifiedImpact": "FY2026 revenue $215.94bn (+65%); data centre $193.74bn (+68%), of which compute $162.4bn and networking $31.4bn; gaming $16.0bn; segment operating income $139.3bn; Q4 revenue $68.1bn (+73%); two direct customers at 22% and 14% of total revenue; 9 GW of Blackwell deployed.",
+      "marked": false,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026",
+        "https://app.edgar.tools/companies/NVDA/disclosures/segments"
+      ]
+    },
+    {
+      "id": "e62",
+      "date": "2026-03-16",
+      "datePrecision": "exact",
+      "title": "Vera Rubin platform announced at GTC with seven chips in full production",
+      "category": "product",
+      "description": "At GTC, NVIDIA announced the Vera Rubin platform with seven new chips in full production: the Vera CPU, Rubin GPU, NVLink 6 Switch, ConnectX-9 SuperNIC, BlueField-4 DPU, Spectrum-6 Ethernet switch and the newly integrated NVIDIA Groq 3 LPU. NVIDIA also introduced the DSX platform with Max-Q dynamic power provisioning, claiming 30 per cent more AI infrastructure within a fixed-power data centre. Partner availability was set for the second half of 2026.",
+      "businessSignificance": "The integration of a Groq-derived LPU three months after the licensing deal shows NVIDIA absorbing specialised inference silicon into its rack rather than leaving that workload to competitors. The power-provisioning claim addresses the binding constraint for customers, which is megawatts rather than chip availability.",
+      "quantifiedImpact": "Seven chips in full production; five rack configurations; NVIDIA-claimed 30% more AI infrastructure within a fixed-power data centre via DSX Max-Q.",
+      "marked": true,
+      "sources": [
+        "https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform",
+        "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Opens-Agentic-AI-Frontier/default.aspx"
+      ]
+    },
+    {
+      "id": "e63",
+      "date": "2026-04-29",
+      "datePrecision": "month (April 2026, Meta Q1 2026 results)",
+      "title": "Meta raises 2026 capital expenditure guidance to $125-145 billion",
+      "category": "ecosystem",
+      "description": "Meta reported Q1 2026 capital expenditure including finance-lease principal of $19.84 billion and raised full-year 2026 guidance to $125-145 billion from $115-135 billion, citing higher component pricing and additional data-centre costs to support future-year capacity. Mark Zuckerberg said Meta is rolling out more than one gigawatt of its own custom silicon developed with Broadcom and a significant quantity of AMD chips to complement new NVIDIA systems.",
+      "businessSignificance": "Meta's guidance raise being driven by component pricing rather than volume indicates AI hardware inflation is now a material input cost across the buyer base. Zuckerberg's framing of MTIA and AMD as complements to NVIDIA rather than replacements is the clearest statement of how the largest buyers intend to manage NVIDIA's pricing power.",
+      "quantifiedImpact": "2026 capex guidance raised to $125-145bn from $115-135bn; Q1 2026 capex $19.84bn; more than 1 GW of Broadcom-developed custom silicon being deployed.",
+      "marked": false,
+      "sources": [
+        "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-First-Quarter-2026-Results/",
+        "https://www.datacenterdynamics.com/en/news/meta-raises-planned-capex-for-2026-plans-layoffs-for-efficiency-reasons/"
+      ]
+    },
+    {
+      "id": "e64",
+      "date": "2026-05-20",
+      "datePrecision": "exact",
+      "title": "Q1 fiscal 2027: dividend raised 25x to $0.25 and $80 billion added to buyback",
+      "category": "corporate",
+      "description": "NVIDIA reported record fiscal Q1 2027 revenue of $81.6 billion, up 85 per cent year over year, with data-centre revenue of $75.2 billion, up 92 per cent, and GAAP diluted EPS of $2.39. The board approved an additional $80.0 billion of share repurchase authorisation on 18 May 2026, without expiration, and raised the quarterly dividend from $0.01 to $0.25 per share, payable 26 June 2026 to holders of record on 4 June 2026. Q2 fiscal 2027 revenue was guided to $91.0 billion plus or minus 2 per cent, assuming no data-centre compute revenue from China.",
+      "businessSignificance": "The 25-fold dividend increase and the $80 billion authorisation mark NVIDIA's transition to returning capital at scale rather than reinvesting essentially all cash, signalling management confidence that the demand cycle is durable. NVIDIA also began transitioning to a new two-platform reporting framework in this quarter.",
+      "quantifiedImpact": "Q1 FY2027 revenue $81.615bn (+85% Y/Y, +20% Q/Q); data centre $75.2bn (+92%); GAAP gross margin 74.9%; net income $58.3bn; GAAP diluted EPS $2.39; approximately $20.0bn returned to shareholders in the quarter; $38.5bn remaining on the prior authorisation plus $80.0bn added; dividend raised from $0.01 to $0.25 per share; Q2 FY2027 guidance $91.0bn ±2%.",
+      "marked": false,
+      "sources": [
+        "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx",
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027"
+      ]
+    },
+    {
+      "id": "e65",
+      "date": "2026-05-31",
+      "datePrecision": "exact",
+      "title": "BIS closes the subsidiary loophole on advanced accelerator exports",
+      "category": "regulatory",
+      "description": "BIS issued guidance clarifying that an EAR licence is required for exports of advanced computing items to entities located in any country if those entities are headquartered in Country Group D:5, including China, or Macau, or have an ultimate parent so headquartered. The guidance was prompted by industry questions about whether the November 2023 end-user licence requirement remained enforced given the May 2025 non-enforcement of the AI Diffusion Rule. Reporting indicates Chinese-parented subsidiaries incorporated in Malaysia, Singapore and the UAE had been purchasing Blackwell, Rubin and AMD MI350x-class parts without triggering controls, with industry sources estimating hundreds of thousands of processors may have moved through the gap over roughly a year.",
+      "businessSignificance": "This closes the principal remaining grey channel into Chinese-controlled compute and formally re-establishes headquarters rather than shipping destination as the licence trigger. It does not require existing data centres to stop using previously delivered chips, so the installed base remains in service.",
+      "quantifiedImpact": "Industry sources cited by Reuters estimated hundreds of thousands of advanced processors may have been supplied through the subsidiary channel over approximately one year.",
+      "marked": false,
+      "sources": [
+        "https://sanctionsnews.bakermckenzie.com/bis-clarifies-that-license-requirements-for-advanced-computing-items-to-country-group-d5-and-macau-headquartered-entities-remain-in-force-despite-ai-diffusion-rule-non-enforcement/",
+        "https://www.techtimes.com/articles/320544/20260715/nvidia-h200-shipments-china-called-trivial-blackwell-loophole-draws-fire.htm"
+      ]
+    },
+    {
+      "id": "e66",
+      "date": "2026-05-31",
+      "datePrecision": "exact",
+      "title": "Vera Rubin ramps into full production; shipments from autumn 2026",
+      "category": "product",
+      "description": "At GTC Taipei, NVIDIA announced Vera Rubin was ramping into full production, the third generation of MGX rack-scale systems, with roughly 150 supply-chain partners in Taiwan alone across more than 350 factories in 30 countries. Production shipments were set to begin in autumn 2026 to named cloud providers including AWS, Azure, Google Cloud, Oracle, CoreWeave, Lambda, Nebius and Nscale, with broader OEM availability in the second half of 2026. CoreWeave was first to bring up and validate Vera Rubin NVL72 and reported a 10x improvement in tokens per second per megawatt versus Grace Blackwell NVL72 on a DeepSeek-R1 benchmark.",
+      "businessSignificance": "Full production ahead of shipment confirms NVIDIA held its annual cadence for a second consecutive generation. The tokens-per-megawatt framing is the metric that now governs purchasing, since customers are power-constrained rather than capital-constrained, and it is the basis of NVIDIA's argument against custom-silicon alternatives.",
+      "quantifiedImpact": "Full production from 1 June 2026; roughly 150 Taiwanese supply-chain partners across 350+ factories in 30 countries; 20.7TB of HBM4 pooled across a 72-GPU rack; CoreWeave-reported 10x tokens per second per megawatt versus Grace Blackwell NVL72 on DeepSeek-R1.",
+      "marked": false,
+      "sources": [
+        "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Ramps-Into-Full-Production-to-Power-Agentic-AI-Factories-Worldwide/default.aspx",
+        "https://blogs.nvidia.com/blog/vera-rubin/"
+      ]
+    },
+    {
+      "id": "e67",
+      "date": "2026-07-14",
+      "datePrecision": "exact",
+      "title": "Commerce confirms only trivial H200 volumes have reached China",
+      "category": "regulatory",
+      "description": "Under Secretary of Commerce for Industry and Security Jeffery Kessler told a congressional hearing that a 'very small quantity' of H200 chips had shipped to China and Hong Kong under the licences issued during 2026, declining to give volumes or buyers but providing Congress a confidential list of applications. This was the first on-record confirmation that any H200s had cleared into China. Committee members pressed BIS to add Chinese entities to the entity list, noting no additions since October 2025.",
+      "businessSignificance": "The confirmation validates that the licensing channel functions while demonstrating that the binding constraint is now Beijing's willingness to permit imports rather than Washington's willingness to permit exports. It supports NVIDIA's decision to carry zero China data-centre compute revenue in guidance.",
+      "quantifiedImpact": "Volumes described only as 'trivial' and 'very few'; no figure disclosed publicly. NVIDIA continues to assume zero China data-centre compute revenue in guidance.",
+      "marked": false,
+      "sources": [
+        "https://www.cnbc.com/2026/07/14/nvidia-h200-ai-chips-china.html",
+        "https://theedgemalaysia.com/node/810780"
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "claim": "NVIDIA acquired Groq for $20 billion in December 2025.",
+      "reason": "Could not verify as an acquisition or as a company-disclosed price. NVIDIA issued no press release and no SEC filing, and Jensen Huang stated in writing to employees that 'we are not acquiring Groq as a company'. The roughly $20 billion figure comes solely from CNBC citing Groq lead investor Alex Davis. The underlying non-exclusive licence and talent transfer is verified and included as an event; the characterisation as an acquisition and the price are not."
+    },
+    {
+      "claim": "Microsoft invested exactly $10 billion in OpenAI in January 2023.",
+      "reason": "Could not verify from a primary source. Microsoft and OpenAI both described only a 'multiyear, multibillion dollar' investment and Microsoft explicitly declined to give a figure. The $10 billion number originates with Bloomberg and Semafor reporting and has never been confirmed by either party. The event is included with the amount flagged as reported rather than disclosed."
+    },
+    {
+      "claim": "DeepSeek trained R1 for under $6 million.",
+      "reason": "Could not verify. The sub-$6 million figure circulated in January 2025 press coverage referred to a final training run of the V3 base model and excluded prior research, infrastructure, staff and the cost of the GPU fleet used. Wall Street questioned the figure at the time. The market reaction to R1 is verified and included; the cost claim is not."
+    },
+    {
+      "claim": "Jensen Huang hand-delivered the first DGX-1 to OpenAI in 2016, seeding the NVIDIA-OpenAI relationship.",
+      "reason": "Could not verify to the sourcing standard within this pass. NVIDIA's September 2025 OpenAI announcement references a collaboration 'going back to 2016' and 'the first DGX supercomputer', but no contemporaneous NVIDIA newsroom item, filing or wire report confirming the specific delivery event was located."
+    },
+    {
+      "claim": "The 15 per cent H20 China revenue-share arrangement was codified into US regulation in 2025.",
+      "reason": "Actively contradicted. NVIDIA CFO Colette Kress stated on the Q2 fiscal 2026 earnings call that US government officials had expressed an expectation of receiving 15 per cent of licensed H20 revenue but that no regulation codifying such a requirement had been published, and NVIDIA disclosed litigation risk from the arrangement in its SEC filing. Only the later H200 25 per cent levy was formalised by rule."
+    },
+    {
+      "claim": "NVIDIA holds approximately 90 per cent of the AI accelerator or data-centre GPU market.",
+      "reason": "Could not verify from a primary or auditable source. The 80-90 per cent range appears widely in secondary commentary with no consistent methodology, no defined denominator (merchant GPUs only, or including internally consumed TPUs, Trainium, MTIA and Maia), and no primary market-research citation. NVIDIA does not disclose market share in its filings."
+    },
+    {
+      "claim": "Stargate has committed or deployed $500 billion of capital.",
+      "reason": "Overstated relative to the source. OpenAI's own announcement describes an intent to invest $500 billion over four years with $100 billion deployed immediately. Subsequent reporting indicates the joint venture entity itself had developed no data centres and that OpenAI routed activity through bilateral site-level deals. The $500 billion is an aspirational target, not committed capital, and is recorded as such in the event."
+    },
+    {
+      "claim": "SoftBank paid approximately $500-600 million for Graphcore.",
+      "reason": "Could not verify. Terms were explicitly not disclosed by either party; Graphcore CEO Nigel Toon declined to confirm figures at the announcement briefing. The $500 million and $600 million numbers appear only in unsourced secondary reports. The acquisition itself is verified and included without a price."
+    },
+    {
+      "claim": "Blackwell shipments were delayed in 2024 by a packaging or mask design flaw requiring a respin.",
+      "reason": "Could not verify. The claim originated in trade and press reporting in mid-2024 and was never confirmed by NVIDIA in a filing or announcement. NVIDIA's Q4 fiscal 2025 disclosure of $11 billion of Blackwell revenue in the first full quarter is inconsistent with a material delay, and analyst notes anticipating a mid-2025 slip were explicitly addressed by that result."
+    },
+    {
+      "claim": "BIS has published the replacement rule promised when the AI Diffusion Rule was rescinded in May 2025.",
+      "reason": "Could not verify that a replacement rule has been issued. BIS stated in May 2025 that it planned to publish a regulation formalising the rescission and would issue a replacement rule in future. As of the May 2026 BIS guidance clarifying that pre-existing November 2023 licence requirements remain in force, no replacement framework rule was identified."
+    },
+    {
+      "claim": "The 2018 post-crypto correction cost NVIDIA roughly $700 million of gaming revenue.",
+      "reason": "Not a company-disclosed figure. NVIDIA disclosed $57 million of charges for components and chips in Q3 fiscal 2019 and a Q4 guidance of $2.70 billion against $3.40 billion consensus. A sell-side estimate of roughly $600 million of mid-range Pascal channel inventory circulated at the time but is an analyst estimate, not a disclosure. The verifiable guidance gap of approximately $700 million is recorded instead."
+    },
+    {
+      "claim": "The AMD Helios rack launched in July 2026 at approximately $5.25 million per rack.",
+      "reason": "Could not verify to the sourcing standard. The launch date and price appear only on a low-authority secondary site. AMD's own materials confirm Helios and MI400 as 2026 products and AMD investor relations confirms the initial 1 gigawatt OpenAI MI450 deployment beginning in the second half of 2026; those verified elements are recorded in the MI350 and AMD-OpenAI events instead."
+    },
+    {
+      "claim": "Cerebras withdrew its IPO in 2025.",
+      "reason": "Could not verify. The only source located was a low-authority aggregator page. No SEC filing, wire report or Cerebras statement confirming a withdrawal was found, so no Cerebras event is included in the timeline."
+    },
+    {
+      "claim": "Meta will spend $600 billion on capital expenditure in 2026.",
+      "reason": "Conflates two figures. The $600 billion is Meta's stated commitment to spend in the United States by 2028 on data centres and supporting infrastructure, cited in CNBC's coverage of the NVIDIA partnership. Meta's own Q1 2026 release guides 2026 capital expenditure including finance-lease principal to $125-145 billion, which is the figure recorded."
+    },
+    {
+      "claim": "NVIDIA's China revenue was 26 per cent of total in fiscal 2022 and 21 per cent in fiscal 2023.",
+      "reason": "Could not verify against the filings within this pass, and the two disclosure bases are not comparable. The FY2026 10-K recast prior periods onto a customer-headquarters basis only back to fiscal 2024. Bloomberg reporting supports the general statement that China supplied roughly a quarter of revenue as recently as 2022, and that is the form in which it is recorded; the specific fiscal 2022 and 2023 percentages are not asserted."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "description": "Evidence on the durability of NVIDIA's software position, and comparative R&D."
+  },
+  "cudaDevelopers": {
+    "definitionalWarning": "The figures below are NOT a consistent metric. 'Registered developers in the NVIDIA Developer Program' (2020), 'CUDA developers' (2023, 2024) and 'developers who have used CUDA since 2006' (2025) are three different things. NVIDIA has never published a methodology. Treat the series as directional evidence of ecosystem scale, not as a precise time series.",
+    "points": [
+      {
+        "date": "2020-08-20",
+        "value": 2000000,
+        "metric": "Registered developers in the NVIDIA Developer Program (not CUDA-specific)",
+        "confidence": "reported",
+        "sourceQuality": "primary",
+        "url": "https://www.developer-tech.com/news/nvidia-two-million-registered-developers/",
+        "supportingDetail": "NVIDIA also stated ~100,000 downloads per month of registered kits (CUDA, cuDNN, TensorRT, OptiX) and an average of 438,000 CUDA downloads per month (CUDA is downloadable without registration)."
+      },
+      {
+        "date": "2023-05",
+        "value": 4000000,
+        "metric": "CUDA developers",
+        "confidence": "reported",
+        "sourceQuality": "MEDIUM — Seeking Alpha reporting the COMPUTEX 2023 disclosure; the primary NVIDIA keynote citation was not retrieved in this pass",
+        "url": "https://seekingalpha.com/article/4608475-nvidias-cuda-unleashing-the-power-of-parallel-computing-for-ai-dominance",
+        "supportingDetail": "Also cited: 40 million cumulative CUDA downloads"
+      },
+      {
+        "date": "2024-06-02",
+        "value": 5000000,
+        "metric": "CUDA developers",
+        "confidence": "reported",
+        "sourceQuality": "primary",
+        "url": "https://www.marketscreener.com/quote/stock/NVIDIA-CORPORATION-57355629/news/TAIPEI-NVIDIA-CEO-HUANG-WE-NOW-HAVE-5-MILLION-CUDA-DEVELOPERS-A--46882472/",
+        "supportingDetail": null
+      },
+      {
+        "date": "2025-03",
+        "value": 6000000,
+        "metric": "Developers from 200+ countries or regions who have used CUDA since 2006 (cumulative, not active)",
+        "confidence": "reported",
+        "sourceQuality": "primary",
+        "url": "https://www.youtube.com/watch?v=_waPvOwL9Z8",
+        "supportingDetail": null
+      },
+      {
+        "date": "2026-03",
+        "value": null,
+        "metric": "No updated developer count located",
+        "confidence": "reported",
+        "sourceQuality": "primary",
+        "url": null,
+        "supportingDetail": null
+      }
+    ]
+  },
+  "rAndD": {
+    "definitionalWarning": "Fiscal years are NOT aligned. NVIDIA's fiscal year N ends in January of calendar year N, so NVIDIA FY2026 (ended 25 Jan 2026) overlaps mostly with calendar 2025, which is the correct comparison against AMD FY2025 and Intel FY2025. The table below aligns on that basis. All figures are 'reported' from SEC 10-K filings via the XBRL ResearchAndDevelopmentExpense concept.",
+    "confidence": "reported",
+    "series": [
+      {
+        "year": 2015,
+        "nvidiaFiscalLabel": "FY2016",
+        "nvidia": 1.33,
+        "amd": 0.95,
+        "intel": 12.13
+      },
+      {
+        "year": 2016,
+        "nvidiaFiscalLabel": "FY2017",
+        "nvidia": 1.46,
+        "amd": 1.01,
+        "intel": 12.69
+      },
+      {
+        "year": 2017,
+        "nvidiaFiscalLabel": "FY2018",
+        "nvidia": 1.8,
+        "amd": 1.2,
+        "intel": 13.04
+      },
+      {
+        "year": 2018,
+        "nvidiaFiscalLabel": "FY2019",
+        "nvidia": 2.38,
+        "amd": 1.43,
+        "intel": 13.54
+      },
+      {
+        "year": 2019,
+        "nvidiaFiscalLabel": "FY2020",
+        "nvidia": 2.83,
+        "amd": 1.55,
+        "intel": 13.36
+      },
+      {
+        "year": 2020,
+        "nvidiaFiscalLabel": "FY2021",
+        "nvidia": 3.92,
+        "amd": 1.98,
+        "intel": 13.56
+      },
+      {
+        "year": 2021,
+        "nvidiaFiscalLabel": "FY2022",
+        "nvidia": 5.27,
+        "amd": 2.85,
+        "intel": 15.19
+      },
+      {
+        "year": 2022,
+        "nvidiaFiscalLabel": "FY2023",
+        "nvidia": 7.34,
+        "amd": 5,
+        "intel": 17.53
+      },
+      {
+        "year": 2023,
+        "nvidiaFiscalLabel": "FY2024",
+        "nvidia": 8.68,
+        "amd": 5.87,
+        "intel": 16.05
+      },
+      {
+        "year": 2024,
+        "nvidiaFiscalLabel": "FY2025",
+        "nvidia": 12.91,
+        "amd": 6.46,
+        "intel": 16.55
+      },
+      {
+        "year": 2025,
+        "nvidiaFiscalLabel": "FY2026",
+        "nvidia": 18.5,
+        "amd": 8.09,
+        "intel": 13.77
+      }
+    ]
+  }
+}

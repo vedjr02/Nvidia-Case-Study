@@ -1,0 +1,611 @@
+{
+  "meta": {
+    "description": "Market-share estimates and competitor accelerator programmes. Share figures are definition-dependent and must always be displayed with their definition.",
+    "confidenceFieldDefinition": {
+      "reported": "Figure taken directly from an SEC filing, company earnings press release, company IR/newsroom page, or a company executive's on-the-record statement. Hard number.",
+      "estimate": "Third-party analyst-firm estimate or forecast. Soft number. Always attributed to a named firm and dated.",
+      "guidance": "Forward-looking figure stated publicly by company management. Not yet actual.",
+      "computed": "Arithmetic derived by this research pass from 'reported' inputs. The inputs are hard; the ratio/definition is ours and is stated explicitly."
+    }
+  },
+  "aiAcceleratorShare": {
+    "criticalWarning": "The estimates below use MATERIALLY DIFFERENT market definitions and are deliberately NOT reconciled. 'AI accelerator card revenue' (NVIDIA ~97% in 2023) and 'data-centre AI chip market including server CPUs' (NVIDIA ~65% in 2023) are both from TechInsights for the same year and differ by 32 percentage points purely because of the denominator. Any chart mixing these is wrong.",
+    "definitions": [
+      "A. Merchant AI accelerator CARD revenue — discrete accelerator boards sold by merchant vendors (NVIDIA, AMD, Intel). Excludes hyperscaler custom ASICs entirely. Gives the HIGHEST NVIDIA share (95-97%).",
+      "B. Merchant data-centre GPU/AI-chip revenue among the three public vendors (NVIDIA, AMD, Intel data-centre segments). Excludes custom ASICs. Gives ~85-88%.",
+      "C. Data-centre AI chipset market including GPUs plus custom accelerators — the denominator adds hyperscaler ASICs. Gives ~80-85%.",
+      "D. Total data-centre AI chip market including server CPUs, ASSPs, GPUs, ASICs and FPGAs. Gives the LOWEST NVIDIA share (~65% in 2023).",
+      "E. Broad 'AI data centre chip' forecasts that also fold in CPUs with integral AI acceleration and FPGAs (Omdia). Used for market SIZE; Omdia's public release does not state a NVIDIA share percentage."
+    ],
+    "estimates": [
+      {
+        "year": 2022,
+        "nvidiaSharePct": 96,
+        "marketDefinition": "A — AI accelerator card revenue (merchant)",
+        "firm": "TechInsights",
+        "confidence": "estimate",
+        "asOf": "2024-04 (ARI-2404-801 series)",
+        "sourceQuality": "secondary — an analyst summarising a TechInsights report; TechInsights is named explicitly and figures are quoted directly",
+        "url": "https://www.linkedin.com/pulse/surprise-nvidia-owns-two-thirds-data-center-ai-chip-market-joshi-tovkf",
+        "notes": "Stated as the prior-year comparative for the 97% 2023 figure."
+      },
+      {
+        "year": 2022,
+        "nvidiaSharePct": 42,
+        "marketDefinition": "D — data-centre AI chip market including server processors, ASSPs (GPUs and ASICs) and FPGAs, weighted by chip ASP",
+        "firm": "TechInsights",
+        "confidence": "estimate",
+        "asOf": "2024-04",
+        "sourceQuality": "secondary, firm named",
+        "url": "https://www.linkedin.com/pulse/surprise-nvidia-owns-two-thirds-data-center-ai-chip-market-joshi-tovkf",
+        "notes": "Same firm, same year as the 96% figure above — the 54-point gap is purely definitional."
+      },
+      {
+        "year": 2023,
+        "nvidiaSharePct": 97,
+        "marketDefinition": "A — AI accelerator card revenue (merchant)",
+        "firm": "TechInsights",
+        "confidence": "estimate",
+        "asOf": "2024-04",
+        "sourceQuality": "secondary, firm named",
+        "url": "https://www.linkedin.com/pulse/surprise-nvidia-owns-two-thirds-data-center-ai-chip-market-joshi-tovkf",
+        "notes": "'a record 97% market share in the $39 billion AI accelerator card market in 2023, up from 96% in 2022'. AMD MI300X and Intel Gaudi 2 described as having limited traction."
+      },
+      {
+        "year": 2023,
+        "nvidiaSharePct": 95,
+        "marketDefinition": "A — data-centre AI accelerator market",
+        "firm": "TechInsights",
+        "confidence": "estimate",
+        "asOf": "2024-12-04 (product ARI-2404-801, 'Data-Center AI Accelerator Market – Q1 2024 Update')",
+        "sourceQuality": "primary — TechInsights' own product abstract",
+        "url": "https://www.techinsights.com/products/ari-2404-801",
+        "notes": "TechInsights' own page says 95% and gives $39.3B market / $38.1B NVIDIA (which arithmetically is 97.0%). DISAGREEMENT with the 97% figure above, from the same firm. Both recorded. Also states NVIDIA shipped 3.5 million GPU accelerator cards in 2023 and H100 ASPs reached ~$40,000."
+      },
+      {
+        "year": 2023,
+        "nvidiaSharePct": 65,
+        "marketDefinition": "D — data-centre AI chip market including server processors, ASSPs and FPGAs",
+        "firm": "TechInsights",
+        "confidence": "estimate",
+        "asOf": "2024-04",
+        "sourceQuality": "secondary, firm named",
+        "url": "https://www.linkedin.com/pulse/surprise-nvidia-owns-two-thirds-data-center-ai-chip-market-joshi-tovkf",
+        "notes": "Up from 42% in 2022. NVIDIA AI chip revenue on this definition tripled from $3.4B to $11.4B (+239%). Note this $11.4B is far below NVIDIA's own reported data-centre revenue, which indicates TechInsights is measuring something narrower on the NVIDIA side too."
+      },
+      {
+        "year": 2024,
+        "nvidiaSharePct": 85,
+        "marketDefinition": "C — data-centre AI chipset market (GPUs $28.52B of the $32.6B total, plus custom accelerators)",
+        "firm": "Futurum (Futurum Group / Richard Gordon, VP & Practice Lead for Semiconductors)",
+        "confidence": "estimate",
+        "asOf": "2025 (Q4 2024 data)",
+        "sourceQuality": "primary — Futurum's own press release",
+        "url": "https://futurumgroup.com/press-release/4q-2024-record-sales-of-32-6b-for-data-center-ai-processors-and-accelerators/",
+        "notes": "Market +22.2% QoQ. GPUs were 87.6% of quarterly revenue. Futurum cross-references NVIDIA's own reported $35.6B Q4 data-centre revenue, which EXCEEDS the $32.6B total market they define — a strong signal that Futurum's market perimeter and NVIDIA's reported segment are not the same thing. Treat with caution."
+      },
+      {
+        "year": 2024,
+        "nvidiaSharePct": null,
+        "marketDefinition": "A — merchant silicon data-centre AI accelerators",
+        "firm": "TechInsights",
+        "confidence": "estimate",
+        "asOf": "2025 (Year in Review: NVIDIA Shrugs Off AI Competition)",
+        "sourceQuality": "primary — TechInsights library content",
+        "url": "https://library.techinsights.com/public/hg-content/1fe49f7c-c67d-4530-9b40-c92df815fc30",
+        "notes": "No numeric share published in the free version. Recorded as qualitative rather than inventing a number."
+      },
+      {
+        "year": 2025,
+        "nvidiaSharePct": 88,
+        "marketDefinition": "B — NVIDIA's share of data-centre revenue among merchant vendors; TrendForce's framing was 'NVIDIA near 88% in FY2Q26 data center revenue'",
+        "firm": "TrendForce",
+        "confidence": "estimate",
+        "asOf": "2025-08-28",
+        "sourceQuality": "primary — TrendForce research note title/abstract",
+        "url": "https://www.trendforce.com/research/download/RP250828PI",
+        "notes": "'FY2Q26' is NVIDIA's fiscal quarter ending July 2025, i.e. calendar Q2 2025. Only the headline number is available without purchase; the exact denominator is not stated in the free abstract."
+      },
+      {
+        "year": 2025,
+        "nvidiaSharePct": null,
+        "marketDefinition": "E — GPUs, AI ASICs and ASSPs, FPGAs for AI, and CPUs with integral AI acceleration hardware, for cloud and data centre",
+        "firm": "Omdia",
+        "confidence": "estimate",
+        "asOf": "2025-08-28",
+        "sourceQuality": "primary — Omdia press release via BusinessWire",
+        "url": "https://www.businesswire.com/news/home/20250828272306/en/New-Omdia-Forecast-AI-Data-Center-Chip-Market-to-Hit-%24286bn-Growth-Likely-Peaking-as-Custom-ASICs-Gain-Ground",
+        "notes": "Omdia sizes the market ($123B in 2024, $207B expected 2025, $286B by 2030) but publishes NO NVIDIA share percentage in this release. Recorded as market size only. Omdia observes alternatives gaining traction in 2025: Google TPUs, Huawei Ascend, Groq, Cerebras, and AMD Instinct. Omdia expects AI infrastructure spending to peak as a share of the data centre in 2026."
+      },
+      {
+        "year": 2026,
+        "nvidiaSharePct": 81,
+        "marketDefinition": "C — data-centre AI GPU / AI chip market, described as including a wider vendor set than merchant GPUs alone",
+        "firm": "IDC",
+        "confidence": "estimate",
+        "asOf": "2026 (mid-year)",
+        "sourceQuality": "LOW — secondary outlets citing 'IDC data' without linking a specific IDC report or press release. The figure appears in several places (cryptobriefing, axis-intelligence, commandlinux) with identical phrasing, which suggests a single unverified origin.",
+        "url": "https://cryptobriefing.com/nvidia-chips-shipping-ai-gpu-market/",
+        "notes": "FLAGGED FOR VERIFICATION. The 80-81% figure is widely repeated for 2026 but no primary IDC publication was located in this pass. Do not use in the case study without obtaining the underlying IDC report."
+      },
+      {
+        "year": 2026,
+        "nvidiaSharePct": 87.4,
+        "marketDefinition": "B — NVIDIA data-centre revenue as a share of the combined data-centre revenue reported by NVIDIA, AMD and Intel only. Excludes ALL hyperscaler custom silicon. This is a three-vendor merchant ratio, not a market share.",
+        "firm": "Axis Intelligence Research (computed from SEC filings)",
+        "confidence": "computed",
+        "asOf": "2026",
+        "sourceQuality": "LOW as a research firm — Axis Intelligence is an SEO-oriented publisher, not a recognised analyst house. However the CALCULATION is transparent and reproducible from SEC filings: NVIDIA $75.2B, AMD $5.775B, Intel $5.1B for Q1 2026.",
+        "url": "https://axis-intelligence.com/ai-chip-market-share/",
+        "notes": "Recorded because the inputs are checkable, not because the publisher is authoritative. Recommend recomputing directly from the three 10-Qs before use. The underlying arithmetic (75.2 / 86.075) does give 87.4%."
+      },
+      {
+        "year": 2025,
+        "nvidiaSharePct": 86,
+        "marketDefinition": "B — each company's share of combined NVIDIA + Intel + AMD reported data-centre segment revenue",
+        "firm": "Bloomberg (data) / Visual Capitalist (presentation)",
+        "confidence": "computed",
+        "asOf": "2025-Q4 publication",
+        "sourceQuality": "medium — derived from company-reported segment revenue, explicitly described as a peer-set share, sourced to Bloomberg",
+        "url": "https://www.visualcapitalist.com/charted-the-battle-for-ai-data-center-revenue-2021-2025/",
+        "notes": "This is the cleanest long series available because it is built entirely from reported segment revenue. But it measures only the three merchant vendors and it uses each company's OWN segment definition, which differ (AMD Data Center includes EPYC CPUs; Intel DCAI includes Xeon; NVIDIA Data Center includes networking). It is a useful narrative series, not a market share."
+      }
+    ]
+  },
+  "gpuMarketShare": {
+    "marketDefinition": "Jon Peddie Research (JPR) 'add-in board' (AIB) market: PC graphics add-in boards carrying discrete graphics chips, sold into desktop PCs, workstations and servers, measured in UNIT SHIPMENTS (not revenue). This is a desktop discrete-graphics measure and has essentially nothing to do with the data-centre AI accelerator market. Do not conflate the two.",
+    "dataQualityWarning": [
+      "JPR's free press releases almost always state quarter-over-quarter percentage-point CHANGES, not absolute levels. Absolute shares are usually read off JPR's Figure 2 chart by the reporting outlet, so they are rounded and occasionally inconsistent between outlets.",
+      "Specific known inconsistency: Q4 2025 is widely reported at NVIDIA 94% (TechPowerUp, VideoCardz, both citing JPR), while Q1 2026 is widely reported at NVIDIA ~90% (TweakTown, igor'sLAB, KitGuru, all citing JPR) — yet JPR's own Q1'26 release states NVIDIA's share moved by only -0.4 percentage points. A 94% → 90% move is inconsistent with -0.4pp. Treat the reported LEVELS in these two quarters as approximate and prefer JPR's stated DELTAS.",
+      "Similar tension exists across Q2'25 / Q3'25: TechSpot reports NVIDIA at 92% in Q3'25 'down from 94% in the previous quarter' (a -2pp move), while JPR's own Q3'25 release states NVIDIA -1.2pp.",
+      "JPR shipment figures are estimates by JPR, not audited vendor disclosures. All rows below are therefore confidence='estimate' even where JPR states them as fact."
+    ],
+    "points": [
+      {
+        "quarter": "Q3 2015",
+        "nvidiaSharePct": 81.1,
+        "confidence": "estimate",
+        "firm": "Jon Peddie Research",
+        "url": "https://www.jonpeddie.com/news/the-add-in-board-market-increased-in-q315-amd-gained-market-share-nvidia-lo/",
+        "notes": "JPR: 'Nvidia continues to hold a dominant market share position at 81.1%.' AIB shipments +27.6% QoQ, -3.8% YoY. AMD desktop AIB units +33.3% QoQ; NVIDIA +26.4% QoQ. AMD share not stated numerically in the free release."
+      },
+      {
+        "quarter": "Q1 2023",
+        "nvidiaSharePct": 83.7,
+        "confidence": "estimate",
+        "firm": "Jon Peddie Research",
+        "url": "https://www.jonpeddie.com/news/the-graphics-add-in-board-market-continued-its-correction-in-q1-2023/",
+        "notes": "JPR states NVIDIA 83.7% in the bullet list and '84% market share' in the body. AMD share flat QoQ; Intel +2pp. Shipments -12.6% QoQ, -38.2% YoY."
+      },
+      {
+        "quarter": "Q3 2023",
+        "nvidiaSharePct": 82,
+        "confidence": "estimate",
+        "firm": "Jon Peddie Research",
+        "url": "https://wccftech.com/amd-nvidia-intel-aib-discrete-gpu-market-share-report-q4-2023/",
+        "notes": "Prior-quarter comparatives given inside the Q4 2023 coverage. Lower source quality than a direct JPR release."
+      },
+      {
+        "quarter": "Q4 2023",
+        "nvidiaSharePct": 80,
+        "confidence": "estimate",
+        "firm": "Jon Peddie Research",
+        "url": "https://www.jonpeddie.com/news/shipments-of-graphics-add-in-boards-increase-for-third-quarter-in-a-row/",
+        "notes": "JPR: 'Nvidia continues to hold a dominant market share position at 80%.' NVIDIA -2pp QoQ. Shipments +6.8% QoQ, +32% YoY. AMD units +17% QoQ, +117% YoY."
+      },
+      {
+        "quarter": "Q1 2024",
+        "nvidiaSharePct": 88,
+        "confidence": "estimate",
+        "firm": "Jon Peddie Research",
+        "url": "https://www.jonpeddie.com/news/shipments-of-graphics-add-in-boards-decline-in-q1-of-24-as-the-market-experiences-a-return-to-seasonality/",
+        "notes": "JPR: NVIDIA share +8pp QoQ to 88%; AMD -7pp; Intel flat. Shipments -7.9% QoQ, +39.2% YoY. Note the +8pp swing from 80% is unusually large and JPR did not explain it."
+      },
+      {
+        "quarter": "Q2 2025",
+        "nvidiaSharePct": null,
+        "confidence": "estimate",
+        "firm": "Jon Peddie Research",
+        "url": "https://www.jonpeddie.com/news/q225-pc-graphics-add-in-board-shipments-increased-27-0-from-last-quarter/",
+        "notes": "JPR states deltas only. Shipments +27.0% QoQ — JPR later attributed the spike to panic buying ahead of tariffs. TechSpot separately reported the Q2'25 level as 94%, which is not stated in the JPR release."
+      },
+      {
+        "quarter": "Q3 2025",
+        "nvidiaSharePct": 92,
+        "confidence": "estimate",
+        "firm": "Jon Peddie Research",
+        "url": "https://www.jonpeddie.com/news/global-add-in-board-market-8-8-billion-in-q325-with-a-cagr-of-0-7-to-2029/",
+        "notes": "JPR release gives deltas and $8.8B market value; TechSpot supplies the 92/7/1 levels. TechSpot says this was 'down from 94% in the previous quarter', implying -2pp, whereas JPR states -1.2pp. DISAGREEMENT recorded, not resolved."
+      },
+      {
+        "quarter": "Q4 2025",
+        "nvidiaSharePct": 94,
+        "confidence": "estimate",
+        "firm": "Jon Peddie Research",
+        "url": "https://www.techpowerup.com/347125/nvidia-grabs-94-aib-gpu-market-share-amd-falls-to-5",
+        "notes": "Described by TechPowerUp as an all-time high in recent reports. Shipments -4.4% QoQ but +36% YoY (from 8.45M in Q4'24). JPR attributed the QoQ decline to GDDR6/GDDR7 memory price rises and tariffs. Desktop AIB attach rate 55%, -12.3% QoQ. JPR forecast a -5.9% AIB CAGR and 172M installed base."
+      },
+      {
+        "quarter": "Q1 2026",
+        "nvidiaSharePct": 90,
+        "confidence": "estimate",
+        "firm": "Jon Peddie Research",
+        "url": "https://www.jonpeddie.com/news/q126-pc-graphics-add-in-board-shipments-decreased-0-6-from-last-quarter-to-12-million-units-with-a-cagr-to-2029-of-3-3/",
+        "notes": "MOST RECENT AVAILABLE as of 26 Jul 2026. Deltas verified against the JPR release directly. igor'sLAB explicitly notes the rounded figures do not total exactly 100%. AIB attach rate in desktop PCs rose to 76% (+33.2% QoQ) while desktop PC CPU shipments fell -25% YoY. JPR: 'Data center GPU boards were up an average of 18.6% from last quarter.' JPR forecasts a -3.3% AIB CAGR 2024-2029 to a 183M installed base."
+      }
+    ]
+  },
+  "programmes": {
+    "amd": {
+      "programme": "Instinct data-centre GPU line (CDNA architecture) plus, from 2026, the Helios rack-scale system",
+      "currentStatus": "Strongest non-NVIDIA merchant position. MI400 series launched 23 July 2026; Helios rack in full production with shipments beginning end of Q3 2026. Multi-gigawatt commitments from OpenAI and Anthropic are now the defining feature of the programme.",
+      "disclosedDeploymentScale": [
+        {
+          "customer": "OpenAI",
+          "commitment": "6 gigawatts of MI450-series GPUs; OpenAI holds warrants for up to 10% of AMD stock under the agreement",
+          "status": "OpenAI's Sachin Katti (head of infrastructure) said at Advancing AI 2026 that OpenAI had been running GPT-class workloads on Helios racks for three months and expects to deploy Helios at massive scale from late 2026, accelerating into 2027",
+          "confidence": "reported",
+          "url": "https://www.fierce-network.com/cloud/amd-launches-full-stack-ai-compute-agentic-era"
+        },
+        {
+          "customer": "Anthropic",
+          "commitment": "Up to 2 gigawatts of MI450-series GPUs plus up to $5 billion in AMD equity investment",
+          "announcedDate": "2026-07-22",
+          "confidence": "reported",
+          "url": "https://www.fierce-network.com/cloud/amd-launches-full-stack-ai-compute-agentic-era"
+        },
+        {
+          "customer": "HUMAIN (joint venture with AMD and Cisco)",
+          "commitment": "Plans to deploy 1 GW of AI infrastructure by 2030",
+          "confidence": "reported",
+          "source": "AMD Q4 2025 earnings slides"
+        },
+        {
+          "customer": "HPE",
+          "commitment": "Will adopt AMD Helios and deliver the 'Herder' supercomputer powered by MI430X GPUs and EPYC 'Venice' CPUs",
+          "confidence": "reported",
+          "source": "AMD Q4 2025 earnings slides"
+        },
+        {
+          "customer": "Other named Helios adopters",
+          "commitment": "Meta, Microsoft, Oracle",
+          "confidence": "reported",
+          "url": "https://www.techpowerup.com/351006/amd-instinct-mi400-series-and-helios-rack-debut-cdna-5-goes-2-nm-plus-rocm-ai-and-gorgon-halo"
+        }
+      ],
+      "disclosedRevenue": {
+        "note": "AMD does not disclose Instinct GPU revenue separately. The Data Center segment (see competitorFinancials.amd) is the closest reported proxy and includes EPYC server CPUs.",
+        "dataPoints": [
+          {
+            "period": "FY2024",
+            "claim": "AMD generated more than $5 billion in Instinct data-centre GPU revenue in 2024",
+            "confidence": "reported",
+            "sourceQuality": "MEDIUM — attributed to AMD management commentary and widely repeated, but not located in a primary AMD press release in this pass. VERIFY before use."
+          },
+          {
+            "period": "Q4 2025",
+            "claim": "Q4 2025 included roughly $390 million of MI308 GPU sales to China",
+            "confidence": "estimate",
+            "sourceQuality": "LOW — secondary (commandlinux). Related and better-sourced: AMD's Q4 2025 Data Center operating income benefited from an MI308 inventory reserve RELEASE, which is confirmed in AMD's own Q4'25 earnings slides."
+          }
+        ]
+      },
+      "roadmap": [
+        {
+          "product": "Instinct MI500 series",
+          "targetYear": 2027,
+          "confidence": "reported",
+          "source": "AMD reaffirmation at Advancing AI 2026"
+        },
+        {
+          "product": "Instinct MI600 series",
+          "targetYear": 2028,
+          "confidence": "reported",
+          "source": "AMD reaffirmation at Advancing AI 2026"
+        }
+      ],
+      "software": {
+        "stack": "ROCm; ROCm.ai announced at Advancing AI 2026 as an 'AI-native developer experience'",
+        "note": "Software maturity relative to CUDA remains the most commonly cited gap. Omdia specifically credited AMD's 2024 software investments with boosting Instinct traction."
+      },
+      "milestones": [
+        {
+          "date": "2023-12-06",
+          "event": "Instinct MI300X and MI300A announced generally available at the Advancing AI event",
+          "detail": "MI300X: CDNA 3, 304 CUs, 192GB HBM3, 5.3 TB/s, 5nm/6nm. MI300A APU: 228 CUs + 24 Zen 4 cores, 128GB HBM3.",
+          "confidence": "reported",
+          "url": "https://www.amd.com/en/newsroom/press-releases/2023-12-6-amd-delivers-leadership-portfolio-of-data-center-a.html"
+        },
+        {
+          "date": "2024-10-10",
+          "event": "Instinct MI325X launched",
+          "detail": "Production shipments Q4 2024, broad system availability from Q1 2025. Memory cut from the originally announced 288GB to 256GB HBM3E per GPU. Announced alongside Pensando Pollara 400 NIC and Salina DPU.",
+          "confidence": "reported",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1220/amd-delivers-leadership-ai-performance-with-amd-instinct-mi325x-accelerators"
+        },
+        {
+          "date": "2024-10-10",
+          "event": "MI350 series previewed",
+          "detail": "CDNA 4, 3nm, up to 288GB HBM3E, FP4/FP6 support, claimed 35x inference improvement over CDNA 3. Targeted for availability in H2 2025.",
+          "confidence": "reported",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1220/amd-delivers-leadership-ai-performance-with-amd-instinct-mi325x-accelerators"
+        },
+        {
+          "date": "2026-01",
+          "event": "CES 2026 — MI440X previewed and Helios rack-scale platform blueprint shown",
+          "detail": "AMD described Helios as 'the blueprint for yotta-scale AI' and unveiled MI440X for enterprise AI.",
+          "confidence": "reported",
+          "source": "AMD Q4 2025 earnings slides, 3 Feb 2026",
+          "url": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000014/amdq425earningsslidesfin.htm"
+        },
+        {
+          "date": "2026-07-23",
+          "event": "Instinct MI400 series formally launched at Advancing AI 2026, San Francisco",
+          "detail": "Family: MI455X (frontier AI / AI factories) and MI430X (sovereign AI and HPC). CDNA 5, TSMC 2nm, 320 billion transistors, 432GB HBM4. Peak MXFP8/MXFP4 up to 4x MI355X.",
+          "confidence": "reported",
+          "url": "https://newsroom.amd.com/news/aai-2026-mi400-instinct-update/"
+        },
+        {
+          "date": "2026-07-23",
+          "event": "Helios rack launched and in full production",
+          "detail": "72 MI455X GPUs across 18 four-GPU trays, 31TB unified HBM4, 2.9 exaflops FP4, EPYC 9006 'Venice' CPUs, AMD Pensando networking, all-Ethernet open-standards fabric (UALink scale-up, UltraEthernet scale-out), 4,600 CPU cores and 18,000 GPU compute units per rack, double-wide form factor. Schneider Electric published a 246 kW reference design. AMD claims vs NVIDIA Vera Rubin NVL72: +15% peak FP4, +50% HBM capacity, +6% HBM bandwidth, +50% scale-out bandwidth, up to 30% more tokens per dollar. Shipments start end of Q3 2026, ramping into Q4 2026 and H1 2027.",
+          "confidence": "reported",
+          "urls": [
+            "https://www.phoronix.com/news/AMD-Instinct-MI455X-Helios",
+            "https://www.techpowerup.com/351006/amd-instinct-mi400-series-and-helios-rack-debut-cdna-5-goes-2-nm-plus-rocm-ai-and-gorgon-halo",
+            "https://www.fierce-network.com/cloud/amd-launches-full-stack-ai-compute-agentic-era"
+          ]
+        }
+      ]
+    },
+    "intel": {
+      "programme": "Gaudi (via the Habana Labs acquisition), then Ponte Vecchio, then Falcon Shores, now Jaguar Shores and Crescent Island",
+      "currentStatus": "Effectively absent from the merchant AI accelerator market. Gaudi failed commercially, Falcon Shores was cancelled outright, and Intel's forward bet is Jaguar Shores (rack-scale) with Crescent Island as an inference-focused GPU not sampling until H2 2026. TechInsights recorded AMD overtaking Intel for second place in AI accelerator share during 2024.",
+      "disclosedDeploymentScale": null,
+      "disclosedRevenue": {
+        "note": "Intel has never disclosed AI-accelerator revenue as a line item. The abandoned $500M Gaudi 3 target for 2024 is the only quantitative public anchor and it was a target, not an achievement.",
+        "confidence": "reported"
+      },
+      "roadmap": null,
+      "software": null,
+      "milestones": [
+        {
+          "date": "2022",
+          "event": "Gaudi 2 launched",
+          "detail": "Habana Labs second-generation training accelerator. Achieved limited traction; TechInsights described both MI300X and Gaudi 2 as 'promising alternatives' with 'limited market traction'.",
+          "confidence": "reported"
+        },
+        {
+          "date": "2024-H2",
+          "event": "Gaudi 3 launched with OEM partners including Dell and HPE",
+          "confidence": "reported",
+          "url": "https://techcrunch.com/2025/01/30/intel-wont-bring-its-falcon-shores-ai-chip-to-market/"
+        },
+        {
+          "date": "2024-11",
+          "event": "Intel abandons its $500 million Gaudi 3 revenue target for 2024",
+          "detail": "Cited software-related issues / software platform transition. This is the only quantitative public marker of Gaudi's commercial failure. Few major service providers beyond IBM committed to the chip.",
+          "confidence": "reported",
+          "url": "https://techcrunch.com/2025/01/30/intel-wont-bring-its-falcon-shores-ai-chip-to-market/"
+        },
+        {
+          "date": "2024-12",
+          "event": "Interim co-CEO Michelle Johnston Holthaus tempers expectations publicly",
+          "detail": "Said at an investor conference that Gaudi will not help Intel 'get to the masses' and implied Falcon Shores would not be a game-changer.",
+          "confidence": "reported"
+        },
+        {
+          "date": "2025-01-30",
+          "event": "Falcon Shores CANCELLED as a commercial product",
+          "detail": "Announced on the Q4 2024 earnings call. Holthaus: 'we plan to leverage Falcon Shores as an internal test chip only, without bringing it to market.' Rationale: 'One of the things we've learned from Gaudi is, it's not enough to just deliver the silicon... what customers really want is that full-scale rack solution.' Also: 'We are not yet participating in the cloud-based AI data center market in a meaningful way.'",
+          "confidence": "reported",
+          "urls": [
+            "https://techcrunch.com/2025/01/30/intel-wont-bring-its-falcon-shores-ai-chip-to-market/",
+            "https://www.datacenterdynamics.com/en/news/intel-posts-third-consecutive-quarterly-loss-cancels-planned-release-of-falcon-shores-ai-chip/",
+            "https://www.nextplatform.com/compute/2025/01/31/intel-pushes-out-clearwater-forest-xeon-7-sidelines-falcon-shores-accelerator/1652076"
+          ]
+        },
+        {
+          "date": "2025-01-30",
+          "event": "Jaguar Shores named as the replacement strategy",
+          "detail": "A rack-scale system-level solution rather than a standalone accelerator. Intended to integrate Xeon CPUs, GPU/ASIC hybrid compute, HBM4 and silicon photonics. Possibly manufactured on Intel 18A. No launch date was committed to on the call.",
+          "confidence": "reported"
+        },
+        {
+          "date": "2025-10",
+          "event": "Crescent Island inference-optimised GPU announced",
+          "detail": "Reported as not sampling until H2 2026.",
+          "confidence": "reported",
+          "sourceQuality": "MEDIUM — the H2 2026 sampling date comes from secondary reporting (commandlinux) and should be confirmed against Intel's own announcement."
+        }
+      ]
+    },
+    "google": {
+      "programme": "Tensor Processing Unit (TPU), designed in-house with Broadcom involvement on parts of the programme, fabricated at TSMC",
+      "currentStatus": "TPU7x (Ironwood), the seventh generation, is the current generation and reached general availability on 22 April 2026. Anthropic has committed to accessing up to 1 million TPUs. Google does not publish TPU revenue.",
+      "disclosedDeploymentScale": [
+        {
+          "customer": "Anthropic",
+          "commitment": "Plans to access up to 1 million TPUs, supporting over 1 gigawatt of capacity",
+          "confidence": "reported",
+          "quote": "James Bradbury, Head of Compute at Anthropic, quoted in the Google Cloud Ironwood GA blog",
+          "url": "https://cloud.google.com/blog/products/compute/ironwood-tpus-and-new-axion-based-vms-for-your-ai-workloads"
+        },
+        {
+          "customer": "Google internal",
+          "detail": "Gemini 2.5 and AlphaFold run on TPUs",
+          "confidence": "reported"
+        }
+      ],
+      "disclosedRevenue": null,
+      "roadmap": null,
+      "software": null,
+      "milestones": null
+    },
+    "amazon": {
+      "programme": "Trainium (training and, increasingly, inference) and Inferentia (inference), designed by Annapurna Labs, fabricated at TSMC",
+      "currentStatus": "Trainium3 is generally available (launched December 2025) and Trainium is described by Amazon's CEO as a multibillion-dollar business. Inferentia development has effectively converged into the Trainium line. Amazon does not disclose Trainium revenue.",
+      "disclosedDeploymentScale": [
+        {
+          "item": "Project Rainier",
+          "detail": "Announced Dec 2024, fully operational less than a year later. Amazon's own newsroom says it features 'nearly half a million Trainium2 chips' and provides more than 5x the compute Anthropic used for its previous models; Trainium2 infrastructure 70% larger than any prior AWS AI platform. One Indiana site spans thirty 200,000 sq ft data centres and was reported to consume upwards of 2.2 GW.",
+          "confidence": "reported",
+          "urls": [
+            "https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster",
+            "https://www.theregister.com/on-prem/2025/07/04/amazon-project-rainier-ai-supercomputer-for-anthropic/101239"
+          ]
+        },
+        {
+          "item": "Anthropic on Trainium2",
+          "detail": "Amazon: Claude 'expected to be on more than 1 million Trainium2 chips — for workloads including training and inference — by the end of the year'. A later report states Claude runs on over 1 million deployed Trainium2 chips.",
+          "confidence": "reported",
+          "disagreement": "Amazon's newsroom describes Project Rainier as 'nearly half a million' Trainium2 chips while separately saying Claude will be on 'more than 1 million' Trainium2 chips. A third source says Rainier 'went live in late 2025 with 500,000 chips'. These are reconcilable if Rainier is a subset of Anthropic's total Trainium2 footprint, but Amazon has not said so explicitly. Recorded as-is."
+        },
+        {
+          "item": "Total Trainium fleet",
+          "detail": "1.4 million Trainium chips deployed across all three generations",
+          "confidence": "reported",
+          "sourceQuality": "MEDIUM — company statement reported in a Yahoo/Fortune-style exclusive tour piece",
+          "url": "https://tech.yahoo.com/ai/gemini/articles/exclusive-tour-amazon-trainium-lab-120000579.html"
+        },
+        {
+          "item": "OpenAI",
+          "detail": "AWS agreed to supply OpenAI with 2 gigawatts of Trainium computing capacity",
+          "confidence": "reported",
+          "url": "https://tech.yahoo.com/ai/gemini/articles/exclusive-tour-amazon-trainium-lab-120000579.html"
+        }
+      ],
+      "disclosedRevenue": {
+        "claim": "Andy Jassy (December, on the Trainium3 launch): Trainium is 'already a multibillion-dollar business for AWS'",
+        "confidence": "reported",
+        "precision": "No specific figure. Amazon has never disclosed Trainium revenue."
+      },
+      "roadmap": null,
+      "software": "AWS Neuron SDK (compiler, runtime, training/inference libraries), Neuron Kernel Interface for low-level access, Neuron Explorer for profiling. Runs existing PyTorch and JAX code without changes, per AWS.",
+      "milestones": null
+    },
+    "microsoft": {
+      "programme": "Azure Maia AI accelerator, plus the Cobalt CPU line",
+      "currentStatus": "Maia 200 launched January 2026 and is in production in US Central (Iowa) with US West 3 (Arizona) next. It is inference-only and NOT available for external purchase or per-chip cloud rental. Microsoft remains heavily dependent on NVIDIA for training.",
+      "disclosedDeploymentScale": null,
+      "disclosedRevenue": "None. Maia is internal-only.",
+      "roadmap": null,
+      "software": null,
+      "milestones": null
+    },
+    "meta": {
+      "programme": "MTIA — Meta Training and Inference Accelerator, co-designed with Broadcom, fabricated at TSMC",
+      "currentStatus": "MTIA v2/2i deployed at scale for recommendation inference. Meta announced in April 2026 an expanded multi-year, multi-generation partnership with Broadcom extending through 2029, with a commitment exceeding 1GW as the first phase of a multi-gigawatt rollout, and has said it is developing and deploying four new MTIA generations within two years.",
+      "disclosedDeploymentScale": null,
+      "disclosedRevenue": "None. MTIA is internal-only.",
+      "roadmap": null,
+      "software": null,
+      "milestones": null
+    },
+    "broadcom": {
+      "programme": "Custom AI accelerators ('XPUs') co-designed with hyperscalers, plus Tomahawk and Jericho AI networking silicon",
+      "currentStatus": "The clearest financial window into the custom-ASIC threat to NVIDIA. FY2025 AI semiconductor revenue $20B (+65%), with Q1 FY2026 guided to $8.2B — double year-over-year. Named customers include Google, Meta and OpenAI, with Anthropic and a fifth unnamed hyperscaler reported as additional partners.",
+      "disclosedDeploymentScale": null,
+      "disclosedRevenue": null,
+      "roadmap": null,
+      "software": null,
+      "milestones": null
+    },
+    "cerebras": {
+      "programme": "Wafer-scale AI accelerators and inference cloud",
+      "currentStatus": "PUBLIC. IPO'd in May 2026 in the largest US tech listing since 2019. Stock has been extremely volatile and is well below its debut peak. Growing fast but constrained by data-centre capacity, not chip supply, and dangerously concentrated on a single customer (OpenAI).",
+      "disclosedDeploymentScale": null,
+      "disclosedRevenue": null,
+      "roadmap": null,
+      "software": null,
+      "milestones": null
+    },
+    "graphcore": {
+      "programme": "IPU (Intelligence Processing Unit)",
+      "currentStatus": "No longer an independent competitor. Acquired by SoftBank in July 2024 and operating as a wholly owned subsidiary under the Graphcore name.",
+      "disclosedDeploymentScale": null,
+      "disclosedRevenue": null,
+      "roadmap": null,
+      "software": null,
+      "milestones": null
+    }
+  },
+  "rejected": [
+    {
+      "claim": "NVIDIA had 7 million CUDA developers as of GTC 2026",
+      "reason": "No such figure was stated in the GTC 2026 keynote transcript or in Tom's Hardware's live blog of that keynote. NVIDIA appears to have stopped quoting a headline developer count at GTC 2026, emphasising installed base instead. The number is a plausible extrapolation but is not sourced, so it is excluded.",
+      "task": 6
+    },
+    {
+      "claim": "Microsoft Maia 200 suffered a 7-month delay due to HBM3e supply constraints and TSMC N3P yield issues (68% → 82%), and future Maia generations will use Intel 18A with test chips already taped out",
+      "reason": "Sole source (news.lavx.hu) is internally inconsistent — a January 2026 article that dates a future Phoenix deployment to 'Q3 2024' and cites 'Gartner Q1 2024' for a 2026 growth rate. Not corroborated anywhere else. Treated as unreliable.",
+      "task": 5
+    },
+    {
+      "claim": "SoftBank injected an additional $457 million into Graphcore in April 2026",
+      "reason": "Appears only in a search-engine synthesis with no retrievable primary source or named publication. Retained in the competitorPrograms section explicitly flagged as unverified, but rejected as a usable data point until a primary filing or credible report is located.",
+      "task": 5
+    },
+    {
+      "claim": "IDC puts NVIDIA's 2026 data-centre AI chip share at 80-81%",
+      "reason": "Widely repeated with near-identical phrasing across several low-authority sites (cryptobriefing, axis-intelligence, commandlinux) but no primary IDC press release, report ID or IDC-hosted page was located. Retained in aiAcceleratorShare with sourceQuality 'LOW' and a verification flag, but should not be cited in the case study without the underlying IDC report.",
+      "task": 3
+    },
+    {
+      "claim": "The 2026 AI accelerator market will be $200B+ and NVIDIA's share will fall to 75%",
+      "reason": "Sourced to 'Silicon Analysts' (siliconanalysts.com), which is an SEO content site rather than a recognised research firm. The figures are forward projections presented without methodology. Not credible under the stated sourcing rules.",
+      "task": 3
+    },
+    {
+      "claim": "Axis Intelligence's 'NGISI (Nvidia GPU Installed Base Supremacy Index) stood at 85.1 for Q1 2026'",
+      "reason": "A proprietary composite index invented by an SEO publisher, with no published methodology and no independent adoption. Not a market-structure fact.",
+      "task": 3
+    },
+    {
+      "claim": "AMD unveiled the full MI400 lineup at an 'Advancing AI 2025' event in May 2026, and OpenAI was disclosed as anchor customer in June 2025 per a June 2026 announcement",
+      "reason": "Source (jaredwatkins.com) contains self-contradictory dates mixing 2025 and 2026 events. The verified AMD timeline from AMD's own newsroom and multiple trade outlets is used instead.",
+      "task": 5
+    },
+    {
+      "claim": "Meta's next four MTIA generations are named MTIA 300, 400, 450 and 500",
+      "reason": "Meta's own April 2026 announcement says only 'four new generations of MTIA chips within the next two years' without naming them. The numeric names appear only in secondary aggregation. The count is recorded; the names are rejected.",
+      "task": 5
+    },
+    {
+      "claim": "Broadcom's FY2025 exit AI backlog was $73 billion and FY2027 AI revenue from its three largest customers will be $60-90 billion",
+      "reason": "Not rejected outright — retained in the data with confidence 'reported'/'estimate' — but flagged here because both come from secondary summaries of the Q4 FY2025 earnings call rather than the primary transcript or press release. Confirm against the transcript before publication.",
+      "task": 1,
+      "status": "retained with verification flag"
+    },
+    {
+      "claim": "Full JPR quarterly AIB market share series for 2016-2022 and 2024-Q1 2025",
+      "reason": "Not obtainable. JPR publishes only percentage-point deltas and selective levels in its free press releases; the complete quarterly share history is behind its paid AIB report ($3,000 single issue, $6,000 annual subscription). No figures were interpolated or estimated to fill these gaps.",
+      "task": 2
+    },
+    {
+      "claim": "AMD Data Center segment revenue for 2015-2020",
+      "reason": "Does not exist. AMD reported only 'Computing and Graphics' and 'Enterprise, Embedded and Semi-Custom' segments in those years and never restated them onto a Data Center basis. Any 2015-2020 AMD data-centre figure in circulation is an analyst reconstruction, not a company disclosure.",
+      "task": 1
+    },
+    {
+      "claim": "Intel AI-accelerator (Gaudi) revenue for any year",
+      "reason": "Never disclosed by Intel as a financial line item. The only quantitative public anchor is the $500M Gaudi 3 target for 2024, which Intel publicly abandoned in November 2024 — a target, not revenue.",
+      "task": 1
+    },
+    {
+      "claim": "Gartner-attributed NVIDIA AI accelerator market share for any year",
+      "reason": "No Gartner figure specific to NVIDIA's AI accelerator share was located. Gartner appears in secondary sources only in relation to total semiconductor market size forecasts, which is a different question.",
+      "task": 3
+    },
+    {
+      "claim": "Mercury Research AI accelerator or data-centre GPU share figures",
+      "reason": "Mercury Research publishes x86 CPU share and GPU share data, but no AI-accelerator-specific Mercury figure was located in this pass.",
+      "task": 3
+    },
+    {
+      "claim": "GPU-only or AI-only capex splits for Microsoft, Alphabet, Amazon or Meta",
+      "reason": "None of the four disclose this. Any 'AI capex' figure attributed to them is an analyst allocation, not a company disclosure.",
+      "task": 4
+    }
+  ]
+}
