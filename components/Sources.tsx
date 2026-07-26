@@ -208,12 +208,30 @@ export function Sources() {
 
         <Rule className="mt-20" />
 
-        <p className="pt-10 font-sans text-[0.75rem] leading-[1.7] text-ink-faint">
+        <div className="grid grid-cols-1 gap-10 pt-10 sm:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] sm:gap-14">
+          <div>
+            <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-ink-muted">
+              About this piece
+            </p>
+            <p className="mt-3 font-serif text-[1.0625rem] leading-[1.45] text-ink">
+              Vedant Ambre
+            </p>
+            <p className="mt-1 font-sans text-[0.8125rem] text-ink-muted">
+              VA · Independent analysis
+            </p>
+          </div>
+          <p className="font-sans text-[0.8125rem] leading-[1.7] text-ink-muted">
+            The research, sourcing and business analysis were done personally.
+            This page is the presentation of that work — an editorial reading of
+            the findings, not a product, and not affiliated with NVIDIA
+            Corporation.
+          </p>
+        </div>
+
+        <p className="mt-12 border-t border-t-rule pt-8 font-sans text-[0.75rem] leading-[1.7] text-ink-faint">
           Data extracted {financialsMeta.extractedOn}. Most recent reported
-          quarter: {financialsMeta.mostRecentReportedQuarter}. This is an
-          independent analysis for educational purposes and is not affiliated
-          with, endorsed by, or produced in cooperation with NVIDIA Corporation.
-          It is not investment advice.
+          quarter: {financialsMeta.mostRecentReportedQuarter}. Prepared for
+          educational purposes. Not investment advice.
         </p>
       </Column>
     </Band>

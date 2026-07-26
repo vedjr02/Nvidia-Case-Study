@@ -16,7 +16,12 @@ export function Intro() {
     <Band as="section" className="py-[14vh]">
       <Column>
         <Reveal>
-          <Kicker>The argument</Kicker>
+          <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+            <Kicker>The argument</Kicker>
+            <p className="font-sans text-[0.6875rem] uppercase tracking-[0.14em] text-ink-faint">
+              Analysis by Vedant Ambre
+            </p>
+          </div>
         </Reveal>
 
         <Reveal delay={0.05}>
