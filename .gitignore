@@ -32,3 +32,4 @@ yarn-error.log*
 research/raw
 .tmp_research
 .micro_push_count
+.env*
