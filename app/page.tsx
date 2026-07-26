@@ -1,4 +1,5 @@
 import { ChapterNav } from "@/components/ChapterNav";
+import { EventRecord } from "@/components/EventRecord";
 import { ExecutiveSummary } from "@/components/ExecutiveSummary";
 import { Hero } from "@/components/Hero";
 import { IndustryContext } from "@/components/IndustryContext";
@@ -28,6 +29,7 @@ export default function Page() {
         <TurningPointThree />
         <TurningPointFour />
 
+        <EventRecord />
         <KeyTakeaways />
         <ExecutiveSummary />
         <Sources />
